@@ -1,0 +1,35 @@
+<div class="bg-black min-h-screen text-white font-sans selection:bg-primary-neonCyan selection:text-black overflow-x-hidden">
+  
+  <!-- Fixed Header with Glassmorphism -->
+  <div class="fixed top-0 left-0 w-full z-50 bg-black/50 backdrop-blur-lg border-b border-white/5 supports-[backdrop-filter]:bg-black/20">
+    <app-header />
+  </div>
+  
+  <main class="pt-20"> <!-- Padding top added so content is not hidden behind fixed header -->
+    <div id="hero">
+      <app-hero />
+    </div>
+    
+    <div id="manifesto">
+      <app-manifesto />
+    </div>
+    
+    <div id="services">
+      <app-services />
+    </div>
+    
+    <div id="solutions">
+      <app-ai-solutions />
+    </div>
+    
+    <div id="academy">
+      <app-academy />
+    </div>
+    
+    <div id="contact">
+      <app-contact />
+    </div>
+  </main>
+
+  <app-footer />
+</div>

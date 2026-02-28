@@ -1,0 +1,270 @@
+<div class="bg-black min-h-screen text-white font-sans selection:bg-primary-neonCyan selection:text-black overflow-x-hidden">
+  
+  <!-- Header Minimalista -->
+  <nav class="w-full px-6 py-4 flex justify-between items-center fixed top-0 left-0 bg-black/80 backdrop-blur-md z-50 border-b border-white/5">
+    <div class="flex items-center gap-2">
+       <a href="/" class="cursor-pointer">
+        <img src="/images/logo.png" alt="Marcos Torres" class="h-8 md:h-10 object-contain filter brightness-0 invert opacity-90">
+       </a>
+    </div>
+    <div class="hidden md:flex items-center gap-4">
+        <span class="text-sm text-primary-neonViolet font-bold animate-pulse">🔴 EN VIVO ESTE MIÉRCOLES</span>
+        <button (click)="scrollToRegister()" class="px-6 py-2 bg-white text-black font-bold rounded-full text-sm hover:scale-105 transition-transform uppercase tracking-wider">
+        Asegurar mi Cupo
+        </button>
+    </div>
+  </nav>
+
+  <main class="pt-24 pb-20">
+    
+    <!-- HERO SECTION: EL GANCHO -->
+    <section class="container mx-auto px-4 mb-20 md:mb-28 text-center relative">
+      <!-- Background Effect -->
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary-neonCyan/5 blur-[120px] rounded-full pointer-events-none"></div>
+
+      <div class="inline-block px-4 py-1 rounded-full bg-primary-neonViolet/10 border border-primary-neonViolet/30 text-primary-neonViolet font-mono text-xs md:text-sm mb-6 animate-fade-in uppercase tracking-widest font-bold">
+        🚀 Taller Gratuito - Cupos Limitados
+      </div>
+      
+      <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight max-w-5xl mx-auto animate-fade-in-up relative z-10">
+        El Desafío 20X: Crea tu Primera <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-neonCyan to-blue-500">Plataforma Web Funcional</span> con IA
+      </h1>
+      
+      <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed font-light animate-fade-in-up animation-delay-200">
+        Aprende a construir una aplicación completa que resuelve problemas reales sin años de estudio. Domina <span class="text-white font-bold">Cursor AI</span> y el protocolo <span class="text-white font-bold">Antigravity</span> para programar 20 veces más rápido.
+      </p>
+
+      <!-- Large Date/Time Info -->
+      <div class="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12 mb-12 animate-fade-in-up animation-delay-300">
+        <div class="flex flex-col items-center">
+            <span class="text-gray-500 font-mono text-xs uppercase tracking-[0.3em] mb-2">Fecha</span>
+            <span class="text-4xl md:text-5xl font-black text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]">MIÉRCOLES 28</span>
+        </div>
+        <div class="hidden md:block w-px h-16 bg-gradient-to-b from-transparent via-white/20 to-transparent"></div>
+        <div class="flex flex-col items-center">
+            <span class="text-gray-500 font-mono text-xs uppercase tracking-[0.3em] mb-2">Hora</span>
+            <span class="text-4xl md:text-5xl font-black text-primary-neonCyan drop-shadow-[0_0_10px_rgba(0,243,255,0.3)]">8:00 PM</span>
+        </div>
+      </div>
+
+      <!-- Demo Image -->
+      <div class="max-w-4xl mx-auto bg-zinc-900 border border-white/10 rounded-2xl aspect-video mb-12 flex items-center justify-center relative overflow-hidden group shadow-2xl animate-fade-in-up animation-delay-300">
+        <img 
+            src="/image.webp" 
+            alt="Demo Plataforma Web" 
+            class="w-full h-full object-cover scale-105 group-hover:scale-110 transition-transform duration-700 ease-out">
+        
+        <!-- Overlay sutil -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+        
+        <!-- Play Icon (Optional hint that it's interactive content) -->
+        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+            <div class="w-20 h-20 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20">
+                <span class="text-4xl">🚀</span>
+            </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col md:flex-row justify-center gap-4 animate-fade-in-up animation-delay-300">
+        <button (click)="scrollToRegister()" class="px-8 py-5 bg-gradient-to-r from-primary-neonCyan to-blue-600 text-black font-bold text-lg md:text-xl rounded-xl shadow-[0_0_30px_rgba(0,243,255,0.4)] hover:shadow-[0_0_50px_rgba(0,243,255,0.6)] hover:-translate-y-1 transition-all duration-300 uppercase tracking-widest">
+          👉 ¡Quiero Aprender Gratis!
+        </button>
+      </div>
+      <p class="mt-4 text-sm text-gray-500">Incluye PDF de "Prompts Iniciales" de regalo al registrarte.</p>
+    </section>
+
+    <!-- WHAT YOU WILL LEARN -->
+    <section class="bg-zinc-900/50 border-y border-white/5 py-20 mb-20 backdrop-blur-sm relative overflow-hidden">
+       <!-- Decor -->
+       <div class="absolute top-0 right-0 w-64 h-64 bg-primary-neonViolet/10 blur-[80px] pointer-events-none"></div>
+
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-5xl font-bold text-center mb-16">¿Qué vas a dominar este Miércoles?</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          <!-- Modulo 1 -->
+          <div class="bg-black border border-white/10 p-6 rounded-2xl hover:border-primary-neonCyan/50 transition-all duration-300 group">
+            <div class="text-xs font-bold text-primary-neonCyan mb-4 uppercase tracking-wider">Módulo 1</div>
+            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-primary-neonCyan transition-colors">La Era del Orquestador</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Cómo usar <strong>Cursor AI</strong> para que el código se escriba solo. Deja de teclear, empieza a dirigir.
+            </p>
+          </div>
+
+          <!-- Modulo 2 -->
+          <div class="bg-black border border-white/10 p-6 rounded-2xl hover:border-primary-neonViolet/50 transition-all duration-300 group">
+            <div class="text-xs font-bold text-primary-neonViolet mb-4 uppercase tracking-wider">Módulo 2</div>
+            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-primary-neonViolet transition-colors">El Cerebro de la App</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Configuración relámpago de <strong>NestJS y MongoDB</strong>. Aprende dónde vive la data y cómo gestionarla como un senior.
+            </p>
+          </div>
+
+          <!-- Modulo 3 -->
+          <div class="bg-black border border-white/10 p-6 rounded-2xl hover:border-white/50 transition-all duration-300 group">
+            <div class="text-xs font-bold text-white mb-4 uppercase tracking-wider">Módulo 3</div>
+            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-white transition-colors">Lógica de Negocio Real</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Implementación de <strong>funcionalidades avanzadas</strong> y gestión de datos complejos. Magia pura en tiempo real.
+            </p>
+          </div>
+
+          <!-- Modulo 4 -->
+          <div class="bg-black border border-white/10 p-6 rounded-2xl hover:border-green-500/50 transition-all duration-300 group">
+            <div class="text-xs font-bold text-green-500 mb-4 uppercase tracking-wider">Módulo 4</div>
+            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-green-500 transition-colors">Integración Total</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Cómo conectar el frontend con el backend de manera segura. El flujo completo de una <strong>Plataforma Web Profesional</strong>.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- REGISTRATION FORM -->
+    <section id="register-form" class="container mx-auto px-4 max-w-5xl">
+      <div class="bg-gradient-to-br from-zinc-900 to-black border border-white/10 rounded-3xl p-1 shadow-2xl relative overflow-hidden">
+        
+        <!-- Inner Content -->
+        <div class="bg-black rounded-[20px] p-6 md:p-12 flex flex-col lg:flex-row gap-12 items-center relative z-10">
+            
+            <!-- Left: Urgency & Bonus -->
+            <div class="w-full lg:w-1/2">
+                <div class="inline-block px-3 py-1 bg-red-500/20 text-red-500 text-xs font-bold rounded mb-6 animate-pulse">
+                    🔥 SOLO QUEDAN {{ spotsLeft() }} CUPOS
+                </div>
+                
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Regístrate Gratis y Recibe tu Regalo 🎁</h2>
+                <p class="text-gray-400 mb-8">
+                    Al inscribirte, recibirás inmediatamente el PDF <strong class="text-white">"Prompts Iniciales para Arquitectura"</strong>. Una pequeña victoria antes de empezar el taller.
+                </p>
+
+                <div class="bg-white/5 rounded-xl p-4 border border-white/10 flex items-start gap-4">
+                    <div class="text-3xl">📅</div>
+                    <div>
+                        <p class="text-white font-bold">Miércoles 28 de Enero</p>
+                        <p class="text-sm text-gray-400">8:00 PM - 10:00 PM (Hora Perú/Colombia)</p>
+                    </div>
+                </div>
+                <div class="mt-4 bg-white/5 rounded-xl p-4 border border-white/10 flex items-start gap-4">
+                    <div class="text-3xl">📍</div>
+                    <div>
+                        <p class="text-white font-bold">Sala Privada Zoom</p>
+                        <p class="text-sm text-gray-400">Enlace enviado a tu WhatsApp</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Form -->
+            <div class="w-full lg:w-1/2">
+                @if (submitted()) {
+                    <div class="text-center py-12 px-6 animate-fade-in bg-green-500/10 border border-green-500/30 rounded-3xl shadow-[0_0_30px_rgba(34,197,94,0.1)]">
+                        <div class="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl text-black shadow-[0_0_20px_rgba(34,197,94,0.4)] animate-bounce">✓</div>
+                        <h3 class="text-3xl font-bold text-white mb-4 tracking-tight">¡Registro Exitoso!</h3>
+                        <p class="text-gray-300 text-lg mb-8 leading-relaxed">
+                            Te hemos enviado el acceso al PDF de <strong class="text-white">Prompts Iniciales</strong> a tu correo y WhatsApp.
+                        </p>
+                        <a href="https://chat.whatsapp.com/FOaQdc35DHQIsERB8UkGIo" target="_blank" class="flex items-center justify-center gap-3 w-full py-4 bg-[#25D366] text-white font-bold rounded-xl hover:shadow-[0_0_20px_rgba(37,211,102,0.4)] transition-all duration-300 uppercase tracking-widest text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.438 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.15-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.876 1.213 3.074.149.198 2.095 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.289.173-1.413z"/></svg>
+                            Únete al grupo de WhatsApp
+                        </a>
+                    </div>
+                } @else {
+                    <form (ngSubmit)="onSubmit()" class="space-y-4">
+                        @if (errorMessage()) {
+                            <div class="p-4 bg-red-500/10 border border-red-500/30 rounded-xl animate-fade-in">
+                                <p class="text-red-400 text-sm font-bold flex items-center gap-2">
+                                    <span>⚠️</span> {{ errorMessage() }}
+                                </p>
+                            </div>
+                        }
+
+                        <div>
+                            <label class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1 block">Tu Nombre</label>
+                            <input type="text" [(ngModel)]="formData.name" name="name" required class="w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white focus:border-primary-neonViolet focus:ring-1 focus:ring-primary-neonViolet outline-none transition-all" placeholder="Ej: Marcos Torres">
+                        </div>
+                        <div>
+                            <label class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1 block">Tu Mejor Correo</label>
+                            <input type="email" [(ngModel)]="formData.email" name="email" required class="w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white focus:border-primary-neonViolet focus:ring-1 focus:ring-primary-neonViolet outline-none transition-all" placeholder="Ej: marcos@gmail.com">
+                        </div>
+                        <div>
+                            <label class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1 block">WhatsApp (Para el enlace)</label>
+                            <input type="tel" [(ngModel)]="formData.phone" name="phone" required class="w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white focus:border-primary-neonViolet focus:ring-1 focus:ring-primary-neonViolet outline-none transition-all" placeholder="Ej: +51 999 999 999">
+                        </div>
+
+                        <div>
+                            <label class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1 block">¿Eres Programador?</label>
+                            <select [(ngModel)]="formData.isDeveloper" name="isDeveloper" required class="w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white focus:border-primary-neonViolet focus:ring-1 focus:ring-primary-neonViolet outline-none transition-all appearance-none cursor-pointer">
+                                <option value="" disabled selected class="bg-black text-gray-500">Selecciona una opción</option>
+                                <option value="yes" class="bg-black">Sí, soy programador</option>
+                                <option value="no" class="bg-black">No, estoy empezando</option>
+                            </select>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1 block">País</label>
+                                <select [(ngModel)]="formData.country" name="country" required class="w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white focus:border-primary-neonViolet focus:ring-1 focus:ring-primary-neonViolet outline-none transition-all appearance-none cursor-pointer">
+                                    <option value="" disabled selected class="bg-black text-gray-500">Selecciona tu país</option>
+                                    <option value="Peru" class="bg-black">Perú</option>
+                                    <option value="Colombia" class="bg-black">Colombia</option>
+                                    <option value="Argentina" class="bg-black">Argentina</option>
+                                    <option value="Chile" class="bg-black">Chile</option>
+                                    <option value="Otro" class="bg-black">Otro</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1 block">Nivel (Opcional)</label>
+                                <select [(ngModel)]="formData.level" name="level" class="w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white focus:border-primary-neonViolet focus:ring-1 focus:ring-primary-neonViolet outline-none transition-all appearance-none cursor-pointer">
+                                    <option value="" selected class="bg-black text-gray-500">Prefiero no decir</option>
+                                    <option value="junior" class="bg-black">Junior</option>
+                                    <option value="medium" class="bg-black">Medium</option>
+                                    <option value="senior" class="bg-black">Senior</option>
+                                    <option value="otro" class="bg-black">Otro</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1 block">Perfil de Desarrollo (Opcional)</label>
+                            <select [(ngModel)]="formData.developerProfile" name="developerProfile" class="w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white focus:border-primary-neonViolet focus:ring-1 focus:ring-primary-neonViolet outline-none transition-all appearance-none cursor-pointer">
+                                <option value="" selected class="bg-black text-gray-500">Selecciona tu perfil</option>
+                                <option value="Frontend" class="bg-black">Frontend</option>
+                                <option value="Backend" class="bg-black">Backend</option>
+                                <option value="QA" class="bg-black">QA</option>
+                                <option value="DevOps" class="bg-black">DevOps</option>
+                                <option value="otro" class="bg-black">Otro</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" [disabled]="isSubmitting()" class="w-full py-4 bg-primary-neonViolet text-white font-bold text-lg rounded-xl hover:bg-white hover:text-black hover:scale-[1.02] transition-all duration-300 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed uppercase tracking-widest mt-2">
+                            @if (isSubmitting()) {
+                                <span class="inline-block w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></span>
+                                Registrando...
+                            } @else {
+                                ACCEDER AL TALLER GRATIS
+                            }
+                        </button>
+                        <p class="text-[10px] text-center text-gray-600 mt-2">Tus datos están seguros. Cero spam, solo código.</p>
+                    </form>
+                }
+            </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- BRIDGE TO PRO (Sutil Upsell Anticipado) -->
+    <section class="container mx-auto px-4 mt-20 max-w-4xl text-center opacity-60 hover:opacity-100 transition-opacity duration-500">
+        <p class="text-sm font-mono text-gray-500 mb-4">¿BUSCAS ALGO MÁS AVANZADO?</p>
+        <p class="text-gray-400 text-sm">
+            En el taller gratuito construiremos el MVP funcional. Si luego quieres llevarlo a producción en AWS y venderlo como SaaS seguro, te contaré sobre el <strong class="text-white">Programa Master Gold (Oferta 2x1)</strong> al final de la clase. Pero primero, <span class="text-primary-neonCyan">domina la base gratis.</span>
+        </p>
+    </section>
+
+  </main>
+  
+  <app-footer></app-footer>
+</div>

@@ -1,0 +1,185 @@
+@use "./../../../styles/variables" as vars;
+
+// Animaciones para la landing page
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(162, 57, 202, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(162, 57, 202, 0.6);
+  }
+}
+
+// Clases de animación
+.fade-in-up {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.fade-in-up-delay-1 {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+.fade-in-up-delay-2 {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
+.fade-in-up-delay-3 {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.6s;
+}
+
+// Botones con efectos
+.btn-primary {
+  background: linear-gradient(135deg, vars.$color2, vars.$color3);
+  color: vars.$color4;
+  border: none;
+  border-radius: 12px;
+  padding: 16px 32px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(162, 57, 202, 0.3);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(162, 57, 202, 0.4);
+    animation: glow 2s infinite;
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.btn-secondary {
+  background: transparent;
+  color: vars.$color2;
+  border: 2px solid vars.$color2;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+
+  &:hover {
+    background: vars.$color2;
+    color: vars.$color4;
+    transform: translateY(-2px);
+  }
+}
+
+// Cards con efectos
+.card {
+  background: rgba(30, 30, 30, 0.8);
+  border: 1px solid rgba(162, 57, 202, 0.2);
+  border-radius: 16px;
+  padding: 24px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+
+  &:hover {
+    border-color: vars.$color2;
+    box-shadow: 0 8px 32px rgba(162, 57, 202, 0.2);
+    transform: translateY(-4px);
+  }
+}
+
+// FAQ Accordion
+.faq-item {
+  background: rgba(30, 30, 30, 0.6);
+  border: 1px solid rgba(162, 57, 202, 0.1);
+  border-radius: 12px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: vars.$color2;
+  }
+
+  .faq-question {
+    padding: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    color: vars.$color4;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: vars.$color2;
+    }
+
+    .faq-icon {
+      transition: transform 0.3s ease;
+      color: vars.$color2;
+    }
+  }
+
+  .faq-answer {
+    padding: 0 20px 20px;
+    color: rgba(231, 223, 221, 0.8);
+    line-height: 1.6;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+
+    &.open {
+      max-height: 200px;
+      padding-top: 10px;
+    }
+  }
+
+  &.open .faq-icon {
+    transform: rotate(45deg);
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .btn-primary {
+    padding: 14px 28px;
+    font-size: 16px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+}

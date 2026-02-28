@@ -1,0 +1,9 @@
+@use "./../../../../../styles/variables.scss" as vars;
+
+.cases-container {
+  background: linear-gradient(to right, vars.$color2, vars.$color3);
+}
+
+.title {
+  color: vars.$color4;
+}

@@ -1,0 +1,464 @@
+<!-- Landing Page para Taller de IA - Principios Alex Hormozi -->
+<div
+  class="landing-page"
+  style="background: #ffffff !important; min-height: 100vh"
+>
+  <!-- Header con CTA Principal -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">Academia IA</div>
+        <button (click)="openRegistrationForm()" class="btn-primary">
+          ¡RESERVAR MI CUPO!
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" style="background: #ffffff !important">
+    <div class="container">
+      <!-- H1 Principal -->
+      <h1 class="hero-title">
+        Capacita a tu Equipo, Automatiza tu Empresa y
+        <span class="highlight-text">Recupera 10 Horas a la Semana</span>
+        con IA
+      </h1>
+
+      <!-- Subtítulo -->
+      <p class="hero-subtitle">
+        El Taller Práctico de 3 Horas para Dueños de PYMEs en Perú.
+        <span class="highlight-blue"
+          >Trae a 2 miembros de tu equipo GRATIS</span
+        >
+        y llévate
+        <span class="highlight-green">S/ 2,800 en Bonos de Implementación</span>
+        (Prompts, Plantillas y un Mini-Curso de Automatización No-Code).
+      </p>
+
+      <!-- CTA Principal -->
+      <div class="cta-section">
+        <button (click)="openRegistrationForm()" class="btn-cta-main">
+          ¡RESERVAR MI CUPO + 2 DE MI EQUIPO POR S/ 199!
+        </button>
+        <p class="cta-note">
+          Sorteo 1 a 1 (Valor S/ 1,000) solo para inscritos esta semana
+        </p>
+      </div>
+
+      <!-- Elementos de Urgencia -->
+      <div class="urgency-badges">
+        <div class="urgency-item">
+          <span class="urgency-dot red"></span>
+          Solo 15 cupos disponibles
+        </div>
+        <div class="urgency-item">
+          <span class="urgency-dot orange"></span>
+          Oferta válida solo esta semana
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Problema -->
+  <section
+    id="problema"
+    class="problem-section"
+    style="background: #f8f9fa !important"
+  >
+    <div class="container">
+      <h2 class="section-title">
+        ¿De qué sirve que aprendas IA... si eres el único que la usa en tu
+        empresa?
+      </h2>
+
+      <div class="problem-grid">
+        <div class="problem-column">
+          <div class="problem-card red-border">
+            <h3 class="problem-card-title">El Problema Real</h3>
+            <p class="problem-card-text">
+              Como dueño, puedes aprender trucos de IA, pero si tu equipo sigue
+              atascado en tareas manuales, tú sigues atascado en la operación.
+            </p>
+          </div>
+
+          <div class="problem-card orange-border">
+            <h3 class="problem-card-title">Pierdes Tiempo Valioso</h3>
+            <p class="problem-card-text">
+              Pierdes horas supervisando reportes que una IA podría hacer.
+            </p>
+          </div>
+        </div>
+
+        <div class="problem-column">
+          <div class="problem-card yellow-border">
+            <h3 class="problem-card-title">Tu Equipo No Optimiza</h3>
+            <p class="problem-card-text">
+              Tu equipo de ventas invierte más tiempo escribiendo correos que
+              vendiendo.
+            </p>
+          </div>
+
+          <div class="problem-card red-border">
+            <h3 class="problem-card-title">Marketing Lento y Costoso</h3>
+            <p class="problem-card-text">
+              Tu marketing crea contenido "a mano", lento y costoso.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="problem-conclusion">
+        <p class="conclusion-text">
+          La eficiencia no es un esfuerzo individual. Es un sistema.
+          <span class="highlight-blue">Y estás a 3 horas de construirlo.</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Solución -->
+  <section
+    id="solucion"
+    class="solution-section"
+    style="background: #ffffff !important"
+  >
+    <div class="container">
+      <h2 class="section-title">
+        Te presento el Taller "Productividad IA 360":
+        <span class="highlight-blue"
+          >El Único Taller en Perú que Entrena al Dueño Y a su Equipo</span
+        >
+      </h2>
+
+      <div class="solution-intro">
+        <p class="solution-text">
+          He diseñado este taller en vivo de 3 horas para que salgas, no con
+          "ideas", sino con un sistema.
+        </p>
+        <p class="solution-question">
+          ¿Por qué funciona? Porque atacamos 3 niveles:
+        </p>
+      </div>
+
+      <div class="solution-grid">
+        <!-- TÚ (El Estratega) -->
+        <div class="solution-card">
+          <div class="solution-icon indigo">
+            <span class="icon-text">TÚ</span>
+          </div>
+          <h3 class="solution-title">El Estratega</h3>
+          <p class="solution-description">
+            Aprenderás a detectar oportunidades de automatización (con nuestra
+            Auditoría Checklist) y a medir el ROI.
+          </p>
+          <div class="solution-badge indigo-badge">
+            <p class="badge-text">Incluye: Auditoría Checklist</p>
+          </div>
+        </div>
+
+        <!-- TU EQUIPO (Los Ejecutores) -->
+        <div class="solution-card">
+          <div class="solution-icon green">
+            <span class="icon-text">EQUIPO</span>
+          </div>
+          <h3 class="solution-title">Los Ejecutores</h3>
+          <p class="solution-description">
+            Tus 2 miembros de equipo aprenderán a implementar (con los Kits de
+            Prompts) y a optimizar sus tareas diarias.
+          </p>
+          <div class="solution-badge green-badge">
+            <p class="badge-text">Incluye: Kits de Prompts</p>
+          </div>
+        </div>
+
+        <!-- TUS SISTEMAS (La Automatización) -->
+        <div class="solution-card">
+          <div class="solution-icon purple">
+            <span class="icon-text">SISTEMAS</span>
+          </div>
+          <h3 class="solution-title">La Automatización</h3>
+          <p class="solution-description">
+            Aprenderás (con el Bono "Automatización Nivel 1") a conectar la IA
+            con tus herramientas (Gmail, Sheets) para que trabaje sola.
+          </p>
+          <div class="solution-badge purple-badge">
+            <p class="badge-text">Incluye: Mini-Curso No-Code</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Oferta -->
+  <section
+    id="oferta"
+    class="offer-section"
+    style="background: #f1f3f4 !important"
+  >
+    <div class="container">
+      <h2 class="section-title">
+        Esta no es una "charla". Es un paquete de implementación.
+      </h2>
+      <p class="offer-subtitle">Mira todo lo que obtienes:</p>
+
+      <div class="main-offer-grid">
+        <!-- Producto Principal -->
+        <div class="main-offer-card">
+          <div class="offer-header">
+            <div class="check-icon">
+              <span class="check-text">✓</span>
+            </div>
+            <h3 class="offer-title">Taller en Vivo "Productividad IA 360"</h3>
+          </div>
+          <p class="offer-description">
+            3 horas de entrenamiento práctico con implementación inmediata
+          </p>
+          <div class="offer-price">
+            <span class="price-text">Valor S/ 400</span>
+          </div>
+        </div>
+
+        <!-- Bono Gratis -->
+        <div class="free-offer-card">
+          <div class="offer-header">
+            <div class="free-icon">
+              <span class="free-text">FREE</span>
+            </div>
+            <h3 class="offer-title white">2 Pases de Equipo Adicionales</h3>
+          </div>
+          <p class="offer-description white">
+            Trae a 2 miembros de tu equipo sin costo adicional
+          </p>
+          <div class="offer-price">
+            <span class="price-text white">Valor S/ 800</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bonos -->
+      <div class="bonuses-grid">
+        <!-- Bono 1 -->
+        <div class="bonus-card">
+          <div class="bonus-header">
+            <div class="bonus-number blue">1</div>
+            <h4 class="bonus-title">Mini-Curso "Automatización Nivel 1"</h4>
+          </div>
+          <p class="bonus-description">
+            No-Code para conectar IA con herramientas
+          </p>
+          <span class="bonus-price blue">Valor S/ 500</span>
+        </div>
+
+        <!-- Bono 2 -->
+        <div class="bonus-card">
+          <div class="bonus-header">
+            <div class="bonus-number purple">2</div>
+            <h4 class="bonus-title">Acceso 30 Días a Comunidad WhatsApp</h4>
+          </div>
+          <p class="bonus-description">Soporte continuo y networking</p>
+          <span class="bonus-price purple">Valor S/ 300</span>
+        </div>
+
+        <!-- Bono 3 -->
+        <div class="bonus-card">
+          <div class="bonus-header">
+            <div class="bonus-number indigo">3</div>
+            <h4 class="bonus-title">"Swipe File" Avanzado (+100 Prompts)</h4>
+          </div>
+          <p class="bonus-description">
+            Biblioteca completa de prompts probados
+          </p>
+          <span class="bonus-price indigo">Valor S/ 250</span>
+        </div>
+
+        <!-- Bono 4 -->
+        <div class="bonus-card">
+          <div class="bonus-header">
+            <div class="bonus-number green">4</div>
+            <h4 class="bonus-title">Checklist "Auditoría de IA"</h4>
+          </div>
+          <p class="bonus-description">
+            Herramienta para identificar oportunidades
+          </p>
+          <span class="bonus-price green">Valor S/ 200</span>
+        </div>
+
+        <!-- Bono 5 -->
+        <div class="bonus-card">
+          <div class="bonus-header">
+            <div class="bonus-number orange">5</div>
+            <h4 class="bonus-title">Kit de Inicio Rápido (10 Prompts)</h4>
+          </div>
+          <p class="bonus-description">
+            Prompts listos para usar inmediatamente
+          </p>
+          <span class="bonus-price orange">Valor S/ 150</span>
+        </div>
+
+        <!-- Bono 6 -->
+        <div class="bonus-card">
+          <div class="bonus-header">
+            <div class="bonus-number red">6</div>
+            <h4 class="bonus-title">Acceso de por Vida a la Grabación</h4>
+          </div>
+          <p class="bonus-description">Revisa el contenido cuando quieras</p>
+          <span class="bonus-price red">Valor S/ 100</span>
+        </div>
+      </div>
+
+      <!-- Bono Especial -->
+      <div class="special-bonus">
+        <h3 class="special-bonus-title">🎁 BONO ESPECIAL</h3>
+        <h4 class="special-bonus-subtitle">Sorteo Consultoría 1 a 1</h4>
+        <p class="special-bonus-text">Solo para inscritos esta semana</p>
+        <span class="special-bonus-price">Valor S/ 1,000</span>
+      </div>
+
+      <!-- Resumen de Valor -->
+      <div class="value-summary">
+        <h3 class="summary-title">Resumen de tu Inversión</h3>
+        <div class="summary-grid">
+          <div class="summary-item">
+            <p class="summary-label">Valor Total Real:</p>
+            <p class="summary-original-price">S/ 3,800</p>
+          </div>
+          <div class="summary-item">
+            <p class="summary-label green">
+              Tu Inversión (con 2 miembros de equipo):
+            </p>
+            <p class="summary-final-price">S/ 199</p>
+          </div>
+        </div>
+        <p class="summary-savings">
+          <span class="savings-text">Ahorras S/ 3,601</span> - ¡Más del 95% de
+          descuento!
+        </p>
+      </div>
+
+      <!-- CTA Final -->
+      <div class="final-cta">
+        <button (click)="openRegistrationForm()" class="btn-cta-final">
+          ¡QUIERO AUTOMATIZAR MI EMPRESA AHORA!
+        </button>
+        <p class="guarantee-text">
+          ⚡ Garantía de 30 días o te devolvemos tu dinero
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <h3 class="footer-title">Academia de IA</h3>
+      <p class="footer-subtitle">
+        Especialista en Automatización e IA para PYMEs
+      </p>
+      <div class="footer-links">
+        <a href="#" class="footer-link">LinkedIn</a>
+        <a href="#" class="footer-link">WhatsApp</a>
+        <a href="#" class="footer-link">Email</a>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- Modal de Registro -->
+@if (showRegistrationForm()) {
+<div class="modal-overlay" (click)="closeRegistrationForm()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <div class="modal-header">
+      <h3 class="modal-title">Reserva tu Cupo</h3>
+      <button (click)="closeRegistrationForm()" class="modal-close">×</button>
+    </div>
+
+    @if (successMessage()) {
+    <div class="success-message">
+      <p class="success-title">¡Registro Exitoso!</p>
+      <p class="success-text">{{ successMessage() }}</p>
+    </div>
+    } @if (errors().length > 0) {
+    <div class="error-message">
+      @for (error of errors(); track error) {
+      <p class="error-text">{{ error }}</p>
+      }
+    </div>
+    }
+
+    <form (ngSubmit)="onSubmit()" class="registration-form">
+      <div class="form-group">
+        <label for="name" class="form-label">Nombre Completo</label>
+        <input
+          type="text"
+          id="name"
+          [(ngModel)]="registration.name"
+          name="name"
+          class="form-input"
+          placeholder="Tu nombre completo"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="email" class="form-label">Correo Electrónico</label>
+        <input
+          type="email"
+          id="email"
+          [(ngModel)]="registration.email"
+          name="email"
+          class="form-input"
+          placeholder="tu@email.com"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="whatsapp" class="form-label">WhatsApp</label>
+        <input
+          type="tel"
+          id="whatsapp"
+          [(ngModel)]="registration.whatsapp"
+          name="whatsapp"
+          class="form-input"
+          placeholder="+51 999 999 999"
+          required
+        />
+      </div>
+
+      <button type="submit" [disabled]="isLoading()" class="btn-submit">
+        @if (isLoading()) {
+        <span class="loading-content">
+          <svg
+            class="loading-spinner"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <circle
+              class="spinner-circle"
+              cx="12"
+              cy="12"
+              r="10"
+              stroke="currentColor"
+              stroke-width="4"
+            ></circle>
+            <path
+              class="spinner-path"
+              fill="currentColor"
+              d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+            ></path>
+          </svg>
+          Procesando...
+        </span>
+        } @else { ¡RESERVAR MI CUPO POR S/ 199! }
+      </button>
+    </form>
+
+    <p class="modal-footer-text">
+      Al registrarte aceptas nuestros términos y condiciones. Te enviaremos los
+      detalles del taller por correo.
+    </p>
+  </div>
+</div>
+}

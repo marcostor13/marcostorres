@@ -1,0 +1,514 @@
+/* IA Vendor Landing Page - Estilo TalkNotes */
+
+/* Reset y Base */
+.ia-vendor-page {
+  min-height: 100vh;
+  background: #ffffff !important;
+  font-family: "Poppins", sans-serif !important;
+  color: #000000 !important;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Header */
+.header {
+  background: #ffffff !important;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.header-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #000000 !important;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.guarantee-text {
+  color: #00aa44 !important;
+  font-size: 1.8rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: #4a4a4a !important;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.cta-section {
+  margin-top: 2rem;
+}
+
+.btn-cta-main {
+  background: linear-gradient(135deg, #0066ff, #0044cc) !important;
+  color: white !important;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1.5rem 3rem;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 102, 255, 0.2);
+  margin-bottom: 1rem;
+  font-family: "Poppins", sans-serif !important;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-cta-main:hover {
+  background: linear-gradient(135deg, #0044cc, #003399) !important;
+  transform: scale(1.05);
+}
+
+.cta-note {
+  font-size: 1rem;
+  color: #666666 !important;
+  font-family: "Poppins", sans-serif !important;
+}
+
+/* Sections */
+.section-title {
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: #000000 !important;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.section-subtitle {
+  font-size: 1.5rem;
+  color: #4a4a4a !important;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: "Poppins", sans-serif !important;
+}
+
+/* Problem Section */
+.problem-section {
+  padding: 4rem 0;
+}
+
+.problem-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.problem-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: #ffffff !important;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.problem-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.problem-item p {
+  font-size: 1.125rem;
+  color: #4a4a4a !important;
+  margin: 0;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.testimonial {
+  background: #f8f9fa !important;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.testimonial-text {
+  font-size: 1.25rem;
+  font-style: italic;
+  color: #4a4a4a !important;
+  margin-bottom: 0.5rem;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.testimonial-author {
+  font-size: 1rem;
+  color: #666666 !important;
+  margin: 0;
+  font-family: "Poppins", sans-serif !important;
+}
+
+/* Solution Section */
+.solution-section {
+  padding: 4rem 0;
+}
+
+.solution-benefits {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: #f8f9fa !important;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.benefit-item p {
+  font-size: 1.125rem;
+  color: #4a4a4a !important;
+  margin: 0;
+  font-family: "Poppins", sans-serif !important;
+}
+
+/* Offer Section */
+.offer-section {
+  padding: 4rem 0;
+}
+
+.offer-subtitle {
+  font-size: 1.75rem;
+  color: #0066ff !important;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.offer-description {
+  font-size: 1.125rem;
+  color: #4a4a4a !important;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.deliverables-title {
+  font-size: 1.5rem;
+  color: #000000 !important;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.deliverables-subtitle {
+  font-size: 1.125rem;
+  color: #4a4a4a !important;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-style: italic;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.deliverables-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.deliverable-item {
+  background: #ffffff !important;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.deliverable-item.main-offer {
+  border: 3px solid #0066ff !important;
+  background: linear-gradient(135deg, #f8f9ff, #ffffff) !important;
+}
+
+.deliverable-item.main-offer h5 {
+  color: #0066ff !important;
+}
+
+.deliverable-item.bonus {
+  border: 2px solid #00aa44 !important;
+}
+
+.deliverable-item.guarantee {
+  border: 3px solid #ff4444 !important;
+  background: linear-gradient(135deg, #fff8f8, #ffffff) !important;
+}
+
+.deliverable-item.guarantee h5 {
+  color: #ff4444 !important;
+}
+
+.bonus-badge {
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  background: #00aa44 !important;
+  color: white !important;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.guarantee-badge-special {
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  background: #ff4444 !important;
+  color: white !important;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.deliverable-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.deliverable-item h5 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #000000 !important;
+  margin-bottom: 0.5rem;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.deliverable-item p {
+  font-size: 1rem;
+  color: #4a4a4a !important;
+  margin: 0;
+  font-family: "Poppins", sans-serif !important;
+}
+
+/* Pricing Section */
+.pricing-section {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.original-price {
+  color: #ff4444 !important;
+  text-decoration: line-through;
+  font-size: 1.5rem;
+}
+
+.pricing-description {
+  font-size: 1.125rem;
+  color: #4a4a4a !important;
+  margin-bottom: 2rem;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.price-display {
+  background: #f8f9fa !important;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.price-label {
+  font-size: 1.5rem;
+  color: #4a4a4a !important;
+  margin-bottom: 0.5rem;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.final-price {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #00aa44 !important;
+  margin-bottom: 1.5rem;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.btn-cta-price {
+  background: linear-gradient(135deg, #00aa44, #008833) !important;
+  color: white !important;
+  font-size: 1.25rem;
+  font-weight: bold;
+  padding: 1.25rem 2.5rem;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 170, 68, 0.2);
+  font-family: "Poppins", sans-serif !important;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-cta-price:hover {
+  background: linear-gradient(135deg, #008833, #047857) !important;
+  transform: scale(1.05);
+}
+
+/* Guarantee Section */
+.guarantee-section {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.guarantee-description {
+  font-size: 1.125rem;
+  color: #4a4a4a !important;
+  margin-bottom: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.guarantee-badge {
+  background: #00aa44 !important;
+  color: white !important;
+  padding: 1.5rem;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.guarantee-icon {
+  font-size: 2rem;
+}
+
+/* FAQ Section */
+.faq-section {
+  padding: 4rem 0;
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: #ffffff !important;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+.faq-question {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #000000 !important;
+  margin-bottom: 0.5rem;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.faq-answer {
+  font-size: 1rem;
+  color: #4a4a4a !important;
+  margin: 0;
+  font-family: "Poppins", sans-serif !important;
+}
+
+/* Final CTA Section */
+.final-cta-section {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.final-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white !important;
+  margin-bottom: 1rem;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.final-subtitle {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9) !important;
+  margin-bottom: 2rem;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.btn-cta-final {
+  background: linear-gradient(135deg, #00aa44, #008833) !important;
+  color: white !important;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1.5rem 3rem;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 170, 68, 0.2);
+  font-family: "Poppins", sans-serif !important;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-cta-final:hover {
+  background: linear-gradient(135deg, #008833, #047857) !important;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .container {
+    padding: 0 2rem;
+  }
+
+  .main-title {
+    font-size: 3rem;
+  }
+
+  .problem-list,
+  .solution-benefits {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .deliverables-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-title {
+    font-size: 3.5rem;
+  }
+
+  .deliverables-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

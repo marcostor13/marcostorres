@@ -1,0 +1,131 @@
+@use "./../../../../styles/variables" as vars;
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.control-btn {
+  background: transparent;
+  border: 2px solid vars.$color4;
+  color: vars.$color4;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  padding: 0;
+
+  svg {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    background: vars.$color2;
+    color: vars.$color4;
+    transform: scale(1.1);
+
+    svg {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.carousel-content {
+  position: relative;
+  min-height: 200px;
+  overflow: hidden;
+}
+
+.carousel-wrapper {
+  display: flex;
+  gap: 2rem;
+  transition: all 0.5s ease;
+  padding: 1rem;
+}
+
+.carousel-item {
+  flex: 1;
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.5s ease;
+  text-align: center;
+  padding: 2rem;
+  border: 2px solid vars.$color1;
+  border-radius: 12px;
+  background: vars.$color4;
+  backdrop-filter: blur(8px);
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  @media (min-width: 1280px) {
+    width: calc(25% - 1.5rem);
+    min-width: calc(25% - 1.5rem);
+    max-width: calc(25% - 1.5rem);
+  }
+
+  @media (max-width: 1279px) {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    height: 200px;
+  }
+}
+
+.item-title {
+  color: vars.$color3;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  margin-bottom: 1.5rem;
+  height: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 1rem;
+  line-height: 1.2;
+}
+
+.item-description {
+  color: vars.$color1;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: 1.6;
+  margin: 0;
+  flex-grow: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  padding: 0 1rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.active {
+  animation: fadeIn 0.5s ease forwards;
+}

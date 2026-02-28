@@ -1,0 +1,40 @@
+# Netlify Configuration - Marcos Torres
+# https://docs.netlify.com/build/file-based-configuration/
+
+[build]
+  command = "npm run build"
+  publish = "dist/marcostorres/browser"
+  
+  [build.environment]
+    NODE_VERSION = "20"
+    NPM_FLAGS = "--legacy-peer-deps"
+
+# SPA: todas las rutas no estáticas van a index.html para que Angular Router las maneje
+# SPA fallback: rutas no encontradas → index.html (Angular Router)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Headers de seguridad y caché
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

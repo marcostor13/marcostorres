@@ -1,0 +1,829 @@
+<!-- Landing Page: Taller AI-Powered Developer -->
+<div
+  style="
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0e0b16 0%, #1a1625 100%);
+    font-family: 'Inter', system-ui, sans-serif;
+  "
+>
+  <!-- Sección HERO -->
+  <section
+    style="
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      position: relative;
+      overflow: hidden;
+    "
+  >
+    <!-- Efecto de partículas de fondo -->
+    <div style="position: absolute; inset: 0; opacity: 0.2">
+      <div
+        style="
+          position: absolute;
+          top: 5rem;
+          left: 2.5rem;
+          width: 0.5rem;
+          height: 0.5rem;
+          background: #a78bfa;
+          border-radius: 50%;
+          animation: pulse 2s infinite;
+        "
+      ></div>
+      <div
+        style="
+          position: absolute;
+          top: 10rem;
+          right: 5rem;
+          width: 0.25rem;
+          height: 0.25rem;
+          background: #60a5fa;
+          border-radius: 50%;
+          animation: pulse 2s infinite;
+          animation-delay: 0.5s;
+        "
+      ></div>
+      <div
+        style="
+          position: absolute;
+          bottom: 10rem;
+          left: 5rem;
+          width: 0.75rem;
+          height: 0.75rem;
+          background: #c084fc;
+          border-radius: 50%;
+          animation: pulse 2s infinite;
+          animation-delay: 1s;
+        "
+      ></div>
+      <div
+        style="
+          position: absolute;
+          bottom: 5rem;
+          right: 2.5rem;
+          width: 0.5rem;
+          height: 0.5rem;
+          background: #93c5fd;
+          border-radius: 50%;
+          animation: pulse 2s infinite;
+          animation-delay: 1.5s;
+        "
+      ></div>
+    </div>
+
+    <div
+      style="
+        max-width: 64rem;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+        z-index: 10;
+      "
+    >
+      <!-- Pre-título -->
+      <span
+        style="
+          font-size: 0.875rem;
+          font-weight: 600;
+          color: #a78bfa;
+          letter-spacing: 0.05em;
+          text-transform: uppercase;
+        "
+      >
+        TALLER EXCLUSIVO PARA DESARROLLADORES
+      </span>
+
+      <!-- Título Principal -->
+      <h1
+        style="
+          font-size: 3rem;
+          font-weight: 800;
+          color: white;
+          margin-top: 1rem;
+          line-height: 1.1;
+        "
+      >
+        Deja de codear a la antigua.<br />
+        <span
+          style="
+            background: linear-gradient(to right, #a78bfa, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+          "
+        >
+          Domina la IA </span
+        ><br />
+        y Desarrolla 10x Más Rápido
+      </h1>
+
+      <!-- Subtítulo -->
+      <p
+        style="
+          font-size: 1.25rem;
+          color: #d1d5db;
+          margin-top: 1.5rem;
+          max-width: 32rem;
+          margin-left: auto;
+          margin-right: auto;
+          line-height: 1.6;
+        "
+      >
+        Transforma tu flujo de trabajo con técnicas avanzadas de IA que solo
+        conocen los desarrolladores top. En solo 4 horas aprenderás a ser 10x
+        más productivo.
+      </p>
+
+      <!-- Botón CTA Principal -->
+      <a
+        href="{{ workshopData.whatsappUrl }}"
+        target="_blank"
+        style="
+          background: linear-gradient(135deg, #a239ca, #4717f6);
+          color: #e7dfdd;
+          border: none;
+          border-radius: 0.75rem;
+          padding: 1rem 2rem;
+          font-size: 1.125rem;
+          font-weight: 700;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          text-decoration: none;
+          display: inline-block;
+          text-align: center;
+          box-shadow: 0 4px 15px rgba(162, 57, 202, 0.3);
+          margin-top: 2.5rem;
+        "
+      >
+        QUIERO INSCRIBIRME AHORA (POR WHATSAPP)
+      </a>
+
+      <!-- Texto de Escasez -->
+      <p style="font-size: 0.875rem; color: #9ca3af; margin-top: 1rem">
+        ¡Plazas limitadas! Los {{ remainingSpots() }} primeros reciben una
+        asesoría 1-a-1 de 30 min.
+      </p>
+    </div>
+  </section>
+
+  <!-- Sección PROBLEMA -->
+  <section
+    style="
+      padding: 5rem 1rem;
+      background: linear-gradient(135deg, #1a1625 0%, #0e0b16 100%);
+    "
+  >
+    <div style="max-width: 64rem; margin: 0 auto; text-align: center">
+      <!-- Título -->
+      <h2 style="font-size: 2.25rem; font-weight: 700; color: white">
+        ¿Sientes que la IA te está dejando atrás?
+      </h2>
+
+      <!-- Grid de Puntos de Dolor -->
+      <div
+        style="
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 2rem;
+          margin-top: 3rem;
+          text-align: left;
+        "
+      >
+        @for (painPoint of painPoints; track $index) {
+        <div
+          style="
+            background: rgba(30, 30, 30, 0.8);
+            border: 1px solid rgba(162, 57, 202, 0.2);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+          "
+        >
+          <div style="display: flex; align-items: flex-start">
+            <svg
+              style="
+                width: 1.5rem;
+                height: 1.5rem;
+                color: #f87171;
+                flex-shrink: 0;
+                margin-top: 0.25rem;
+                margin-right: 0.75rem;
+              "
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <p style="font-size: 1.125rem; color: #d1d5db">{{ painPoint }}</p>
+          </div>
+        </div>
+        }
+      </div>
+
+      <!-- Agitación -->
+      <p
+        style="
+          font-size: 1.25rem;
+          color: #d1d5db;
+          margin-top: 3rem;
+          font-style: italic;
+          max-width: 48rem;
+          margin-left: auto;
+          margin-right: auto;
+        "
+      >
+        La IA no va a reemplazar a los desarrolladores... pero los
+        desarrolladores que dominen la IA sí van a reemplazar a los que no lo
+        hagan.
+      </p>
+    </div>
+  </section>
+
+  <!-- Sección SOLUCIÓN -->
+  <section
+    style="
+      padding: 5rem 1rem;
+      background: linear-gradient(135deg, #0e0b16 0%, #1a1625 100%);
+    "
+  >
+    <div style="max-width: 72rem; margin: 0 auto">
+      <div
+        style="
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 4rem;
+          align-items: center;
+        "
+      >
+        <!-- Columna Izquierda -->
+        <div>
+          <h2
+            style="
+              font-size: 2.25rem;
+              font-weight: 700;
+              color: white;
+              margin-bottom: 1.5rem;
+            "
+          >
+            Presentando: El Taller
+            <span
+              style="
+                background: linear-gradient(to right, #a78bfa, #60a5fa);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+              "
+            >
+              "AI-Powered Developer"
+            </span>
+          </h2>
+
+          <p
+            style="
+              font-size: 1.125rem;
+              color: #d1d5db;
+              margin-bottom: 2rem;
+              line-height: 1.6;
+            "
+          >
+            Un taller intensivo de 4 horas donde aprenderás las técnicas más
+            avanzadas de IA aplicadas al desarrollo de software. No es teoría,
+            es práctica pura con casos reales.
+          </p>
+
+          <!-- Checklist de Beneficios -->
+          <ul style="list-style: none; padding: 0; margin: 0">
+            @for (benefit of benefits; track $index) {
+            <li
+              style="
+                display: flex;
+                align-items: flex-start;
+                margin-bottom: 1rem;
+              "
+            >
+              <svg
+                style="
+                  width: 1.5rem;
+                  height: 1.5rem;
+                  color: #4ade80;
+                  flex-shrink: 0;
+                  margin-top: 0.25rem;
+                  margin-right: 0.75rem;
+                "
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span style="font-size: 1.125rem; color: #d1d5db">{{
+                benefit
+              }}</span>
+            </li>
+            }
+          </ul>
+        </div>
+
+        <!-- Columna Derecha - Imagen Placeholder -->
+        <div>
+          <div style="position: relative">
+            <div
+              style="
+                aspect-ratio: 16/9;
+                border-radius: 0.5rem;
+                overflow: hidden;
+                background: linear-gradient(135deg, #1a1625 0%, #2a1f3d 100%);
+                border: 2px solid rgba(162, 57, 202, 0.3);
+              "
+            >
+              <div
+                style="
+                  position: absolute;
+                  inset: 0;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+                <div style="text-align: center">
+                  <svg
+                    style="
+                      width: 5rem;
+                      height: 5rem;
+                      color: #a78bfa;
+                      margin: 0 auto 1rem;
+                    "
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    ></path>
+                  </svg>
+                  <p
+                    style="color: white; font-weight: 600; font-size: 1.125rem"
+                  >
+                    Taller en Vivo
+                  </p>
+                  <p style="color: #9ca3af">4 horas de contenido práctico</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección VALUE STACK -->
+  <section
+    style="
+      padding: 5rem 1rem;
+      background: linear-gradient(135deg, #1a1625 0%, #0e0b16 100%);
+    "
+  >
+    <div style="max-width: 64rem; margin: 0 auto; text-align: center">
+      <h2 style="font-size: 2.25rem; font-weight: 700; color: white">
+        Recibirás Todo Esto
+        <span
+          style="
+            background: linear-gradient(to right, #a78bfa, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+          "
+        >
+          (Valorado en S/ {{ workshopData.originalPrice }})
+        </span>
+      </h2>
+
+      <p
+        style="
+          font-size: 1.125rem;
+          color: #d1d5db;
+          margin-top: 1rem;
+          font-style: italic;
+        "
+      >
+        Aquí tienes tu arsenal completo para dominar el desarrollo con IA:
+      </p>
+
+      <!-- Lista de Valor -->
+      <div style="margin-top: 3rem; text-align: left">
+        @for (item of valueStack; track $index) {
+        <div
+          style="
+            background: rgba(30, 30, 30, 0.8);
+            border: 1px solid rgba(162, 57, 202, 0.2);
+            border-radius: 1rem;
+            padding: 1.25rem;
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(10px);
+          "
+          [style.background]="
+            item.bonus
+              ? 'linear-gradient(to right, rgba(162, 57, 202, 0.2), rgba(71, 23, 246, 0.2))'
+              : ''
+          "
+          [style.border-color]="item.bonus ? '#a78bfa' : ''"
+        >
+          <span style="color: white; font-weight: 500">{{ item.item }}</span>
+          <span style="color: #9ca3af; text-decoration: line-through"
+            >S/ {{ item.price }}</span
+          >
+        </div>
+        }
+      </div>
+
+      <!-- Resumen de Valor -->
+      <div style="margin-top: 3rem">
+        <p style="font-size: 1.5rem; color: #9ca3af">
+          VALOR TOTAL: S/ {{ workshopData.originalPrice }}
+        </p>
+        <p style="font-size: 1.25rem; color: white; margin-top: 1rem">
+          Consíguelo Todo Hoy Por Solo:
+        </p>
+        <p
+          style="
+            font-size: 4.5rem;
+            font-weight: 800;
+            background: linear-gradient(to right, #a78bfa, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-top: 0.5rem;
+          "
+        >
+          S/ {{ workshopData.currentPrice }}
+        </p>
+      </div>
+
+      <!-- Botón CTA -->
+      <a
+        href="{{ workshopData.whatsappUrl }}"
+        target="_blank"
+        style="
+          background: linear-gradient(135deg, #a239ca, #4717f6);
+          color: #e7dfdd;
+          border: none;
+          border-radius: 0.75rem;
+          padding: 1rem 2rem;
+          font-size: 1.125rem;
+          font-weight: 700;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          text-decoration: none;
+          display: inline-block;
+          text-align: center;
+          box-shadow: 0 4px 15px rgba(162, 57, 202, 0.3);
+          margin-top: 2.5rem;
+        "
+      >
+        SÍ, QUIERO MI CUPO POR S/ {{ workshopData.currentPrice }} (WHATSAPP)
+      </a>
+    </div>
+  </section>
+
+  <!-- Sección AUTORIDAD -->
+  <section
+    style="
+      padding: 5rem 1rem;
+      background: linear-gradient(135deg, #0e0b16 0%, #1a1625 100%);
+    "
+  >
+    <div style="max-width: 80rem; margin: 0 auto">
+      <div
+        style="
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 3rem;
+          align-items: center;
+        "
+      >
+        <!-- Foto de perfil -->
+        <div>
+          <div style="position: relative">
+            <img
+              src="/images/agent1.jpg"
+              alt="Marcos Torres"
+              style="
+                border-radius: 50%;
+                width: 12rem;
+                height: 12rem;
+                margin: 0 auto;
+                object-fit: cover;
+                border: 4px solid rgba(162, 57, 202, 0.3);
+                display: block;
+              "
+            />
+          </div>
+        </div>
+
+        <!-- Bio -->
+        <div>
+          <h2
+            style="
+              font-size: 2.25rem;
+              font-weight: 700;
+              color: white;
+              margin-bottom: 1.5rem;
+            "
+          >
+            ¿Quién Soy Yo Para Enseñar Esto?
+          </h2>
+
+          <p
+            style="
+              font-size: 1.125rem;
+              color: #d1d5db;
+              margin-bottom: 1rem;
+              line-height: 1.6;
+            "
+          >
+            Hola, soy
+            <span style="color: #a78bfa; font-weight: 600">Marcos Torres</span>.
+            Tengo 17 años de experiencia desarrollando software y liderando
+            equipos técnicos. He trabajado con empresas como NTTDATA para BCP,
+            ATTACHMEDIA, TELEFÓNICA DEL PERÚ, entre otras. he brindado asesoría
+            técnica a empresas Intecorp, UTP, AVIVA, entre otras.
+          </p>
+
+          <p style="font-size: 1.125rem; color: #d1d5db; line-height: 1.6">
+            Soy experto en
+            <span style="color: #60a5fa; font-weight: 600"
+              >Angular, NestJS y DevOps</span
+            >, y desde hace 3 años he estado experimentando y perfeccionando
+            técnicas de IA para desarrollo. He reducido mis tiempos de
+            desarrollo en un 80% usando estas técnicas.
+          </p>
+
+          <!-- Credenciales -->
+          <div
+            style="
+              margin-top: 2rem;
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+              gap: 1rem;
+            "
+          >
+            <div style="text-align: center">
+              <div style="font-size: 1.5rem; font-weight: 700; color: #a78bfa">
+                17+
+              </div>
+              <div style="font-size: 0.875rem; color: #9ca3af">
+                Años de experiencia
+              </div>
+            </div>
+            <div style="text-align: center">
+              <div style="font-size: 1.5rem; font-weight: 700; color: #60a5fa">
+                50+
+              </div>
+              <div style="font-size: 0.875rem; color: #9ca3af">
+                Proyectos completados
+              </div>
+            </div>
+            <div style="text-align: center">
+              <div style="font-size: 1.5rem; font-weight: 700; color: #4ade80">
+                80%
+              </div>
+              <div style="font-size: 0.875rem; color: #9ca3af">
+                Reducción de tiempo
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección GARANTÍA -->
+  <section
+    style="
+      padding: 5rem 1rem;
+      background: linear-gradient(135deg, #1a1625 0%, #0e0b16 100%);
+    "
+  >
+    <div style="max-width: 48rem; margin: 0 auto; text-align: center">
+      <!-- Icono -->
+      <div>
+        <svg
+          style="
+            width: 5rem;
+            height: 5rem;
+            color: #4ade80;
+            margin: 0 auto;
+            display: block;
+          "
+          fill="currentColor"
+          viewBox="0 0 20 20"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </div>
+
+      <h2
+        style="
+          font-size: 2.25rem;
+          font-weight: 700;
+          color: white;
+          margin-top: 1.5rem;
+        "
+      >
+        Mi Garantía de "Retorno de Inversión" Incondicional
+      </h2>
+
+      <p
+        style="
+          font-size: 1.25rem;
+          color: #d1d5db;
+          margin-top: 1.5rem;
+          line-height: 1.6;
+        "
+      >
+        Estoy tan seguro de que este taller cambiará tu forma de trabajar que te
+        ofrezco una garantía del 100%. Si en las primeras 2 semanas no ves una
+        mejora significativa en tu productividad, te devuelvo tu dinero
+        completo. Sin preguntas, sin complicaciones.
+      </p>
+    </div>
+  </section>
+
+  <!-- Sección CTA FINAL -->
+  <section
+    style="
+      padding: 5rem 1rem;
+      background: linear-gradient(135deg, #0e0b16 0%, #1a1625 100%);
+    "
+  >
+    <div style="max-width: 48rem; margin: 0 auto; text-align: center">
+      <h2 style="font-size: 2.25rem; font-weight: 700; color: white">
+        Elige tu camino: ¿El desarrollador sobrecargado o el desarrollador 10x?
+      </h2>
+
+      <p
+        style="
+          font-size: 1.25rem;
+          color: #a78bfa;
+          font-weight: 600;
+          margin-top: 1.5rem;
+        "
+      >
+        Quedan solo {{ remainingSpots() }} cupos para la asesoría 1-a-1. ¡No te
+        quedes fuera!
+      </p>
+
+      <a
+        href="{{ workshopData.whatsappUrl }}"
+        target="_blank"
+        style="
+          background: linear-gradient(135deg, #a239ca, #4717f6);
+          color: #e7dfdd;
+          border: none;
+          border-radius: 0.75rem;
+          padding: 1rem 2rem;
+          font-size: 1.125rem;
+          font-weight: 700;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          text-decoration: none;
+          display: inline-block;
+          text-align: center;
+          box-shadow: 0 4px 15px rgba(162, 57, 202, 0.3);
+          margin-top: 2.5rem;
+        "
+      >
+        INSCRIBIRME AL TALLER AHORA (POR WHATSAPP)
+      </a>
+
+      <p style="font-size: 0.875rem; color: #9ca3af; margin-top: 1rem">
+        El pago es directo. Escríbeme para coordinar y separar tu cupo.
+      </p>
+    </div>
+  </section>
+
+  <!-- Sección FAQ -->
+  <section
+    style="
+      padding: 5rem 1rem;
+      background: linear-gradient(135deg, #1a1625 0%, #0e0b16 100%);
+    "
+  >
+    <div style="max-width: 48rem; margin: 0 auto">
+      <h2
+        style="
+          font-size: 1.875rem;
+          font-weight: 700;
+          color: white;
+          text-align: center;
+        "
+      >
+        Preguntas Frecuentes
+      </h2>
+
+      <div style="margin-top: 2.5rem">
+        @for (faq of faqs; track $index) {
+        <div
+          style="
+            background: rgba(30, 30, 30, 0.6);
+            border: 1px solid rgba(162, 57, 202, 0.1);
+            border-radius: 0.75rem;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            transition: all 0.3s ease;
+          "
+        >
+          <div
+            style="
+              padding: 1.25rem;
+              cursor: pointer;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              font-weight: 600;
+              color: #e7dfdd;
+              transition: all 0.3s ease;
+            "
+            (click)="toggleFaq($index)"
+          >
+            <span>{{ faq.question }}</span>
+            <svg
+              style="
+                width: 1.5rem;
+                height: 1.5rem;
+                transition: transform 0.3s ease;
+                color: #a78bfa;
+              "
+              [style.transform]="
+                isFaqOpen($index) ? 'rotate(45deg)' : 'rotate(0deg)'
+              "
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </div>
+          <div
+            style="
+              padding: 0 1.25rem 1.25rem;
+              color: rgba(231, 223, 221, 0.8);
+              line-height: 1.6;
+              max-height: 0;
+              overflow: hidden;
+              transition: all 0.3s ease;
+            "
+            [style.max-height]="isFaqOpen($index) ? '200px' : '0'"
+            [style.padding-top]="isFaqOpen($index) ? '0.625rem' : '0'"
+          >
+            {{ faq.answer }}
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer
+    style="padding: 2rem; border-top: 1px solid #374151; background: #0e0b16"
+  >
+    <div style="max-width: 72rem; margin: 0 auto; text-align: center">
+      <p style="font-size: 0.875rem; color: #9ca3af">
+        © 2025 Marcos Torres. Todos los derechos reservados.
+      </p>
+    </div>
+  </footer>
+</div>
+
+<style>
+  @keyframes pulse {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+</style>

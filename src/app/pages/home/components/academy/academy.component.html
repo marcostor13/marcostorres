@@ -1,0 +1,148 @@
+<section class="py-24 bg-white text-black relative overflow-hidden">
+  <!-- Decorative Background -->
+  <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-50"></div>
+
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl md:text-6xl font-bold mb-4 tracking-tight">Marcos Torres Academy 🎓</h2>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto font-medium">La IA no te va a reemplazar. Te reemplazará alguien que use IA.</p>
+    </div>
+
+    <!-- Tabs Navigation -->
+    <div class="flex flex-wrap justify-center gap-4 mb-12">
+      <button 
+        (click)="setTab('devs')"
+        [class]="activeTab() === 'devs' ? 'bg-black text-white shadow-lg scale-105' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'"
+        class="px-6 py-3 md:px-8 md:py-3 rounded-full font-bold transition-all duration-300 text-sm md:text-base border border-transparent hover:border-gray-300">
+        Para Programadores
+      </button>
+      <button 
+        (click)="setTab('tech-teams')"
+        [class]="activeTab() === 'tech-teams' ? 'bg-black text-white shadow-lg scale-105' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'"
+        class="px-6 py-3 md:px-8 md:py-3 rounded-full font-bold transition-all duration-300 text-sm md:text-base border border-transparent hover:border-gray-300">
+        Equipos Tech
+      </button>
+      <button 
+        (click)="setTab('non-tech')"
+        [class]="activeTab() === 'non-tech' ? 'bg-black text-white shadow-lg scale-105' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'"
+        class="px-6 py-3 md:px-8 md:py-3 rounded-full font-bold transition-all duration-300 text-sm md:text-base border border-transparent hover:border-gray-300">
+        Empresas Non-Tech
+      </button>
+    </div>
+
+    <!-- Content -->
+    <div class="max-w-4xl mx-auto bg-white rounded-3xl p-8 md:p-12 border border-gray-200 shadow-2xl transition-all duration-500 relative overflow-hidden">
+        <!-- Content Decoration -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-gray-100 rounded-full blur-3xl -mr-32 -mt-32 pointer-events-none"></div>
+
+      @if (activeTab() === 'devs') {
+        <div class="animate-fade-in relative z-10">
+          <div class="flex items-center gap-4 mb-6">
+            <span class="bg-black text-white px-3 py-1 rounded text-xs md:text-sm font-bold tracking-widest uppercase">The 20X Developer</span>
+          </div>
+          <h3 class="text-2xl md:text-4xl font-bold mb-6 leading-tight">Deja de ser un "picacódigo". <br/>Conviértete en un Arquitecto de Software.</h3>
+          
+          <div class="grid md:grid-cols-2 gap-8 mb-8">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <span class="text-green-500 font-bold text-xl">✓</span>
+                <span class="text-gray-700 font-medium">Aprende a programar con Copilot, Cursor y LLMs avanzados.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-green-500 font-bold text-xl">✓</span>
+                <span class="text-gray-700 font-medium">Aumenta tu velocidad de desarrollo y eficiencia x20.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-green-500 font-bold text-xl">✓</span>
+                <span class="text-gray-700 font-medium">Domina el flujo de trabajo del futuro hoy.</span>
+              </li>
+            </ul>
+            <div class="hidden md:flex items-center justify-center bg-gray-50 rounded-2xl p-6 border border-gray-100">
+                <div class="text-center">
+                    <div class="text-5xl font-black text-black mb-2">20X</div>
+                    <div class="text-sm text-gray-500 uppercase font-bold tracking-widest">Productividad</div>
+                </div>
+            </div>
+          </div>
+
+          <button class="w-full md:w-auto px-8 py-4 bg-primary-neonViolet text-white font-bold rounded-xl hover:bg-opacity-90 transition-all shadow-lg hover:shadow-primary-neonViolet/30 hover:-translate-y-1">
+            VER PROGRAMA
+          </button>
+        </div>
+      }
+
+      @if (activeTab() === 'tech-teams') {
+        <div class="animate-fade-in relative z-10">
+          <div class="flex items-center gap-4 mb-6">
+            <span class="bg-black text-white px-3 py-1 rounded text-xs md:text-sm font-bold tracking-widest uppercase">Dev Team Upgrade</span>
+          </div>
+          <h3 class="text-2xl md:text-4xl font-bold mb-6 leading-tight">Transformamos a tu equipo actual en una fuerza de élite.</h3>
+          
+          <div class="grid md:grid-cols-2 gap-8 mb-8">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <span class="text-blue-500 font-bold text-xl">✓</span>
+                <span class="text-gray-700 font-medium">Capacitación In-House para equipos de desarrollo.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-blue-500 font-bold text-xl">✓</span>
+                <span class="text-gray-700 font-medium">Estandarización de herramientas de IA en el flujo de trabajo.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-blue-500 font-bold text-xl">✓</span>
+                <span class="text-gray-700 font-medium">Reducción drástica del Time-to-Market de tus productos.</span>
+              </li>
+            </ul>
+            <div class="hidden md:flex items-center justify-center bg-gray-50 rounded-2xl p-6 border border-gray-100">
+                <div class="text-center">
+                    <div class="text-5xl font-black text-black mb-2">-50%</div>
+                    <div class="text-sm text-gray-500 uppercase font-bold tracking-widest">Time to Market</div>
+                </div>
+            </div>
+          </div>
+
+          <button class="w-full md:w-auto px-8 py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-opacity-90 transition-all shadow-lg hover:shadow-blue-600/30 hover:-translate-y-1">
+            CAPACITAR A MI EQUIPO
+          </button>
+        </div>
+      }
+
+      @if (activeTab() === 'non-tech') {
+        <div class="animate-fade-in relative z-10">
+          <div class="flex items-center gap-4 mb-6">
+            <span class="bg-black text-white px-3 py-1 rounded text-xs md:text-sm font-bold tracking-widest uppercase">AI Workforce Productivity</span>
+          </div>
+          <h3 class="text-2xl md:text-4xl font-bold mb-6 leading-tight">La IA no es solo para programadores. Es para todos.</h3>
+          
+          <div class="grid md:grid-cols-2 gap-8 mb-8">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <span class="text-purple-600 font-bold text-xl">✓</span>
+                <span class="text-gray-700 font-medium">Instruimos a RRHH, Ventas, Marketing y Admin.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-purple-600 font-bold text-xl">✓</span>
+                <span class="text-gray-700 font-medium">Uso eficiente de ChatGPT, Perplexity y automatización.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-purple-600 font-bold text-xl">✓</span>
+                <span class="text-gray-700 font-medium">Eliminación de tareas repetitivas en toda la organización.</span>
+              </li>
+            </ul>
+             <div class="hidden md:flex items-center justify-center bg-gray-50 rounded-2xl p-6 border border-gray-100">
+                <div class="text-center">
+                    <div class="text-5xl font-black text-black mb-2">100%</div>
+                    <div class="text-sm text-gray-500 uppercase font-bold tracking-widest">Adopción IA</div>
+                </div>
+            </div>
+          </div>
+
+          <button class="w-full md:w-auto px-8 py-4 bg-purple-600 text-white font-bold rounded-xl hover:bg-opacity-90 transition-all shadow-lg hover:shadow-purple-600/30 hover:-translate-y-1">
+            MODERNIZAR FUERZA LABORAL
+          </button>
+        </div>
+      }
+
+    </div>
+  </div>
+</section>

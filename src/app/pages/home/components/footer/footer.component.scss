@@ -1,0 +1,11 @@
+@use "../../../../../styles/variables" as vars;
+
+.footer {
+  background-color: vars.$color2;
+  color: vars.$color4;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+}

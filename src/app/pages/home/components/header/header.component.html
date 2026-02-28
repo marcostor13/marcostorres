@@ -1,0 +1,63 @@
+<nav class="w-full px-6 py-4 flex justify-between items-center relative z-50">
+  <!-- Logo -->
+  <div class="flex items-center gap-2 cursor-pointer z-50" (click)="scrollTo('hero')">
+    <img src="/images/logo.png" alt="Marcos Torres" class="h-10 md:h-12 object-contain filter brightness-0 invert drop-shadow-[0_0_5px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_10px_rgba(162,57,202,0.8)] transition-all duration-300">
+  </div>
+
+  <!-- Desktop Menu -->
+  <div class="hidden lg:flex items-center gap-8 bg-black/30 backdrop-blur-md px-8 py-3 rounded-full border border-white/5">
+    <button (click)="scrollTo('manifesto')" class="text-gray-300 hover:text-primary-neonCyan transition-all duration-300 font-medium text-sm tracking-wide uppercase hover:drop-shadow-[0_0_8px_rgba(0,243,255,0.8)] relative group">
+      Filosofía
+      <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-neonCyan transition-all duration-300 group-hover:w-full"></span>
+    </button>
+    <button (click)="scrollTo('services')" class="text-gray-300 hover:text-primary-neonViolet transition-all duration-300 font-medium text-sm tracking-wide uppercase hover:drop-shadow-[0_0_8px_rgba(189,0,255,0.8)] relative group">
+      Servicios
+      <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-neonViolet transition-all duration-300 group-hover:w-full"></span>
+    </button>
+    <button (click)="scrollTo('solutions')" class="text-gray-300 hover:text-primary-neonCyan transition-all duration-300 font-medium text-sm tracking-wide uppercase hover:drop-shadow-[0_0_8px_rgba(0,243,255,0.8)] relative group">
+      Soluciones IA
+      <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-neonCyan transition-all duration-300 group-hover:w-full"></span>
+    </button>
+    <button (click)="scrollTo('academy')" class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-sm tracking-wide uppercase hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] relative group">
+      Academy
+      <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+    </button>
+  </div>
+
+  <!-- CTA Desktop -->
+  <div class="hidden lg:block">
+    <button (click)="scrollTo('contact')" class="px-6 py-2 border border-primary-neonCyan text-primary-neonCyan rounded-full hover:bg-primary-neonCyan hover:text-black transition-all duration-300 font-bold text-sm tracking-wider shadow-[0_0_15px_rgba(0,243,255,0.2)] hover:shadow-[0_0_25px_rgba(0,243,255,0.5)]">
+      HABLEMOS
+    </button>
+  </div>
+
+  <!-- Mobile Hamburger Button -->
+  <button (click)="toggleMenu()" class="lg:hidden text-white focus:outline-none z-50 relative p-2" aria-label="Toggle Menu">
+    <div class="w-6 h-6 flex flex-col justify-center gap-1.5">
+      <span [class]="isMenuOpen() ? 'rotate-45 translate-y-2 bg-primary-neonCyan' : 'bg-white'" class="block w-full h-0.5 transition-all duration-300 origin-center shadow-[0_0_5px_rgba(255,255,255,0.5)]"></span>
+      <span [class]="isMenuOpen() ? 'opacity-0' : 'bg-white'" class="block w-full h-0.5 transition-all duration-300 shadow-[0_0_5px_rgba(255,255,255,0.5)]"></span>
+      <span [class]="isMenuOpen() ? '-rotate-45 -translate-y-2 bg-primary-neonCyan' : 'bg-white'" class="block w-full h-0.5 transition-all duration-300 origin-center shadow-[0_0_5px_rgba(255,255,255,0.5)]"></span>
+    </div>
+  </button>
+
+  <!-- Mobile Menu Overlay -->
+  <div 
+    [class]="isMenuOpen() ? 'opacity-100 pointer-events-auto translate-x-0' : 'opacity-0 pointer-events-none translate-x-full'"
+    class="fixed inset-0 bg-black/95 backdrop-blur-xl z-40 flex flex-col items-center justify-center gap-8 transition-all duration-500 lg:hidden">
+    
+    <!-- Background Decor -->
+    <div class="absolute top-0 right-0 w-64 h-64 bg-primary-neonViolet/10 blur-[80px] rounded-full pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 w-64 h-64 bg-primary-neonCyan/10 blur-[80px] rounded-full pointer-events-none"></div>
+
+    <button (click)="scrollTo('manifesto')" class="text-3xl text-white font-bold tracking-tight hover:text-primary-neonCyan transition-colors">FILOSOFÍA</button>
+    <button (click)="scrollTo('services')" class="text-3xl text-white font-bold tracking-tight hover:text-primary-neonViolet transition-colors">SERVICIOS</button>
+    <button (click)="scrollTo('solutions')" class="text-3xl text-white font-bold tracking-tight hover:text-primary-neonCyan transition-colors">SOLUCIONES IA</button>
+    <button (click)="scrollTo('academy')" class="text-3xl text-white font-bold tracking-tight hover:text-white transition-colors">ACADEMY</button>
+    
+    <div class="w-16 h-1 bg-white/10 rounded-full my-4"></div>
+
+    <button (click)="scrollTo('contact')" class="px-10 py-4 bg-primary-neonCyan text-black font-bold rounded-full text-xl shadow-[0_0_20px_rgba(0,243,255,0.4)] hover:scale-105 transition-transform">
+      HABLEMOS
+    </button>
+  </div>
+</nav>

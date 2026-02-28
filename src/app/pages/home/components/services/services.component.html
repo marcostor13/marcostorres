@@ -1,0 +1,69 @@
+<section class="py-24 bg-black text-white relative">
+  <!-- Grid Background -->
+  <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:20px_20px] opacity-20"></div>
+
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-6xl font-bold mb-6">Nuestros <span class="text-primary-neonCyan">Servicios</span></h2>
+      <p class="text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed">
+        Soluciones tecnológicas integrales para empresas que buscan liderar el futuro.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Service 1: Desarrollo Web (Clickable) -->
+      <div (click)="goToWebDev()" class="cursor-pointer p-8 border-l-4 border-primary-neonCyan bg-white/5 hover:bg-white/10 transition-all duration-300 group hover:-translate-y-2 flex flex-col relative overflow-hidden">
+        <!-- Shine Effect on Hover -->
+        <div class="absolute top-0 right-0 w-20 h-20 bg-primary-neonCyan/20 blur-[40px] rounded-full group-hover:scale-150 transition-transform duration-500"></div>
+
+        <div class="mb-6 text-primary-neonCyan text-4xl group-hover:scale-110 transition-transform origin-left relative z-10">
+          💻
+        </div>
+        <h3 class="text-2xl font-bold mb-4 group-hover:text-primary-neonCyan transition-colors relative z-10 flex items-center gap-2">
+            Desarrollo de Plataformas Web
+            <span class="text-xs bg-primary-neonCyan text-black px-2 py-0.5 rounded font-bold opacity-0 group-hover:opacity-100 transition-opacity">VER MÁS</span>
+        </h3>
+        <p class="text-gray-400 leading-relaxed mb-6 flex-grow relative z-10">
+          Creamos aplicaciones web modernas, robustas y escalables. Desde complejos sistemas SaaS hasta portales corporativos de alto rendimiento, diseñados para crecer con tu negocio.
+        </p>
+        <ul class="text-sm text-gray-500 space-y-2 mt-auto relative z-10">
+            <li class="flex items-center gap-2">✓ Arquitectura Cloud</li>
+            <li class="flex items-center gap-2">✓ Diseño UX/UI Moderno</li>
+            <li class="flex items-center gap-2">✓ Alto Rendimiento</li>
+        </ul>
+      </div>
+
+      <!-- Service 2: Sistemas con IA -->
+      <div class="p-8 border-l-4 border-primary-neonViolet bg-white/5 hover:bg-white/10 transition-all duration-300 group hover:-translate-y-2 flex flex-col">
+        <div class="mb-6 text-primary-neonViolet text-4xl group-hover:scale-110 transition-transform origin-left">
+          🧠
+        </div>
+        <h3 class="text-2xl font-bold mb-4 group-hover:text-primary-neonViolet transition-colors">Sistemas con Inteligencia Artificial</h3>
+        <p class="text-gray-400 leading-relaxed mb-6 flex-grow">
+          Implementamos IA real en tus procesos. Agentes autónomos, chatbots inteligentes, visión artificial y automatización avanzada para reducir costos y errores.
+        </p>
+        <ul class="text-sm text-gray-500 space-y-2 mt-auto">
+            <li class="flex items-center gap-2">✓ Agentes 24/7</li>
+            <li class="flex items-center gap-2">✓ Procesamiento de Datos</li>
+            <li class="flex items-center gap-2">✓ Automatización (BPA)</li>
+        </ul>
+      </div>
+
+      <!-- Service 3: Capacitación IA -->
+      <div class="p-8 border-l-4 border-white bg-white/5 hover:bg-white/10 transition-all duration-300 group hover:-translate-y-2 flex flex-col">
+        <div class="mb-6 text-white text-4xl group-hover:scale-110 transition-transform origin-left">
+          🎓
+        </div>
+        <h3 class="text-2xl font-bold mb-4 group-hover:text-white transition-colors">Capacitación en Inteligencia Artificial</h3>
+        <p class="text-gray-400 leading-relaxed mb-6 flex-grow">
+          Transformamos a tu equipo. Formación práctica para desarrolladores y personal administrativo en el uso de herramientas de IA para multiplicar su productividad x10.
+        </p>
+        <ul class="text-sm text-gray-500 space-y-2 mt-auto">
+            <li class="flex items-center gap-2">✓ Para Programadores</li>
+            <li class="flex items-center gap-2">✓ Para Empresas</li>
+            <li class="flex items-center gap-2">✓ Workshops Prácticos</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
