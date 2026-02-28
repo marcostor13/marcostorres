@@ -40,3 +40,6 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Large media (host externally or use Git LFS)
+public/images/background.gif
