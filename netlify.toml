@@ -4,13 +4,57 @@
 [build]
   command = "npm run build"
   publish = "dist/marcostorres/browser"
-  
+  functions = "netlify/functions"
+
   [build.environment]
     NODE_VERSION = "20"
     NPM_FLAGS = "--legacy-peer-deps"
 
+# Desarrollo local: npm run dev:netlify → IMPORTANTE: abre http://localhost:4200 (NO 8888)
+# El puerto 8888 solo sirve para las funciones API; si abres 8888 verás errores de Vite.
+[dev]
+  command = "ng serve --proxy-config proxy.conf.json"
+  targetPort = 4200
+  port = 8888
+
+# API: /api/* → Netlify Functions (auth unificado en una función para evitar "Cannot POST")
+[[redirects]]
+  from = "/api/auth/*"
+  to = "/.netlify/functions/api-auth?path=:splat"
+  status = 200
+  force = true
+[[redirects]]
+  from = "/api/whatsapp-accounts"
+  to = "/.netlify/functions/whatsapp-accounts"
+  status = 200
+  force = true
+[[redirects]]
+  from = "/api/whatsapp-webhook"
+  to = "/.netlify/functions/whatsapp-webhook"
+  status = 200
+  force = true
+[[redirects]]
+  from = "/api/whatsapp-send"
+  to = "/.netlify/functions/whatsapp-send"
+  status = 200
+  force = true
+[[redirects]]
+  from = "/api/whatsapp-templates"
+  to = "/.netlify/functions/whatsapp-templates"
+  status = 200
+  force = true
+[[redirects]]
+  from = "/api/whatsapp-messages"
+  to = "/.netlify/functions/whatsapp-messages"
+  status = 200
+  force = true
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+  force = true
+
 # SPA: todas las rutas no estáticas van a index.html para que Angular Router las maneje
-# SPA fallback: rutas no encontradas → index.html (Angular Router)
 [[redirects]]
   from = "/*"
   to = "/index.html"

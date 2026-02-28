@@ -1,0 +1,72 @@
+# Marcos Torres - Reglas para Cursor AI
+
+## Stack y arquitectura
+
+- **Framework**: Angular 19, componentes standalone
+- **Estilos**: Tailwind CSS + SCSS (variables en `src/styles/variables.scss`)
+- **Estado**: Signals (preferir sobre RxJS para estado local)
+- **Formularios**: FormsModule, ReactiveFormsModule cuando sea complejo
+
+## Estructura de carpetas
+
+```
+src/app/
+├── pages/          # Una carpeta por página/feature
+│   └── [nombre]/   # nombre.component.ts, .html, .scss
+├── shared/         # Componentes reutilizables
+├── services/       # Servicios HTTP y lógica
+├── constants/      # Endpoints, config
+└── environments/   # apiUrl, etc.
+```
+
+## Convenciones de nombres
+
+- **Componentes**: `[nombre].component.ts` (kebab-case en carpetas)
+- **Rutas**: kebab-case en URLs (`/curso-productividad-ia`, `/desafio-20x`)
+- **Servicios**: `[nombre].service.ts`, inyectar con `inject()`
+- **Señales**: `nombre = signal<T>(valorInicial)`
+
+## Línea gráfica (referencia: docs/linea-grafica.md)
+
+| Uso | Clase / Variable |
+|-----|-------------------|
+| Fondo oscuro | `bg-primary-dark`, `bg-black` |
+| Acento principal | `primary-neonCyan` (#00F3FF) |
+| Acento secundario | `primary-neonViolet` (#BD00FF) |
+| Texto claro | `text-white`, `text-primary-text` |
+| Botón primario | `bg-primary-neonCyan text-black` |
+| Bordes sutiles | `border-white/10` |
+
+## Patrones de landing pages
+
+1. **Header**: Logo + CTA, fixed, `bg-black/80 backdrop-blur-md`
+2. **Hero**: Título grande, subtítulo, CTA principal
+3. **Secciones**: `py-20`, `container mx-auto px-4`
+4. **Formularios**: inputs con `bg-white/5 border-white/10`, focus `border-primary-neonCyan`
+5. **Footer**: `FooterComponent` reutilizable
+
+## Formularios con backend
+
+- Usar `WorkshopService` o servicio correspondiente
+- Manejar `isSubmitting`, `submitted`, `errorMessage` con signals
+- Mostrar notificación de éxito/error en la UI
+- Enviar: `name`, `email`, `whatsapp`/`phone`, `event`, `country`, etc.
+
+## Responsive
+
+- Mobile-first: estilos base para móvil, luego `md:`, `lg:`, `xl:`
+- Imágenes: `object-cover`, `aspect-video` cuando aplique
+- Grid: `grid-cols-1 md:grid-cols-2 lg:grid-cols-3`
+
+## Rutas
+
+- Registrar en `src/app/app.routes.ts`
+- Usar path descriptivo y SEO-friendly
+- Redirects para rutas antiguas: `{ path: 'viejo', redirectTo: 'nuevo' }`
+
+## Buenas prácticas
+
+- `ChangeDetectionStrategy.OnPush` en componentes
+- Evitar lógica pesada en templates
+- Cargar scripts externos (Calendly, etc.) en `ngOnInit` con `Document.createElement('script')`
+- Siempre incluir `FooterComponent` en landings

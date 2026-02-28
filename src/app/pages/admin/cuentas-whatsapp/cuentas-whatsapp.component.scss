@@ -1,0 +1,198 @@
+.admin-page {
+  max-width: 900px;
+}
+
+.admin-header {
+  margin-bottom: 1.5rem;
+
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 0.5rem;
+  }
+}
+
+.admin-desc {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin: 0 0 1rem;
+
+  a {
+    color: #2563eb;
+  }
+}
+
+.admin-btn-primary {
+  padding: 0.5rem 1rem;
+  background: #2563eb;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+
+  &:hover {
+    background: #1d4ed8;
+  }
+}
+
+.admin-empty {
+  padding: 2rem;
+  background: #fff;
+  border: 1px dashed #e2e8f0;
+  border-radius: 0.5rem;
+  text-align: center;
+  color: #64748b;
+}
+
+.admin-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.admin-card {
+  padding: 1.25rem;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+
+  h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 0.75rem;
+  }
+
+  p {
+    font-size: 0.8125rem;
+    color: #475569;
+    margin: 0 0 0.25rem;
+  }
+}
+
+.admin-meta {
+  margin-top: 0.5rem !important;
+  font-size: 0.75rem !important;
+  color: #94a3b8 !important;
+}
+
+.admin-btn-secondary {
+  margin-top: 1rem;
+  padding: 0.25rem 0.5rem;
+  background: transparent;
+  border: 1px solid #e2e8f0;
+  color: #475569;
+  font-size: 0.875rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+
+  &:hover {
+    background: #f8fafc;
+  }
+}
+
+.admin-card-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.admin-btn-danger {
+  margin-top: 1rem;
+  padding: 0.25rem 0.5rem;
+  background: transparent;
+  border: 1px solid #f87171;
+  color: #dc2626;
+  font-size: 0.875rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+
+  &:hover {
+    background: #fef2f2;
+  }
+}
+
+.admin-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 1rem;
+}
+
+.admin-modal-content {
+  background: #fff;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  max-width: 480px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+
+  h2 {
+    font-size: 1.25rem;
+    margin: 0 0 1rem;
+  }
+}
+
+.admin-error {
+  padding: 0.75rem;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+  font-size: 0.875rem;
+  border-radius: 0.375rem;
+  margin-bottom: 1rem;
+}
+
+.admin-field {
+  margin-bottom: 1rem;
+
+  label {
+    display: block;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: #475569;
+    margin-bottom: 0.25rem;
+  }
+
+  input {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+  }
+}
+
+.admin-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+
+  button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    cursor: pointer;
+
+    &:first-child {
+      background: #f1f5f9;
+      border: 1px solid #e2e8f0;
+      color: #475569;
+    }
+
+    &:last-child {
+      background: #2563eb;
+      border: none;
+      color: #fff;
+
+      &:disabled {
+        opacity: 0.6;
+      }
+    }
+  }
+}

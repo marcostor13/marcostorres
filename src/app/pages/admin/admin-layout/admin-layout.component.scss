@@ -1,0 +1,83 @@
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f8fafc;
+}
+
+.admin-sidebar {
+  width: 240px;
+  background: #0f172a;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+
+.admin-brand {
+  padding: 0 1rem 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+
+  a {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.admin-nav {
+  flex: 1;
+  padding: 1rem 0;
+
+  a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-size: 0.875rem;
+
+    &:hover {
+      background: rgba(255,255,255,0.05);
+      color: #fff;
+    }
+
+    &.active {
+      background: rgba(59, 130, 246, 0.2);
+      color: #60a5fa;
+    }
+  }
+}
+
+.admin-user {
+  padding: 1rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.6);
+
+  span {
+    display: block;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  button {
+    padding: 0.25rem 0.5rem;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: #fff;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-size: 0.75rem;
+
+    &:hover {
+      background: rgba(255,255,255,0.1);
+    }
+  }
+}
+
+.admin-main {
+  flex: 1;
+  padding: 1.5rem;
+  overflow: auto;
+}

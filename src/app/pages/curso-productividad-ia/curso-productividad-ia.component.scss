@@ -1,0 +1,289 @@
+:host {
+  display: block;
+}
+
+// Fondo profesional: gris neutro claro
+.curso-page {
+  background: #f1f5f9;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+// Header minimalista
+.curso-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  background: #fff;
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.curso-whatsapp {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #25d366;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+// Main
+.curso-main {
+  padding-top: 5rem;
+  padding-bottom: 4rem;
+}
+
+.curso-container {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  @media (min-width: 640px) {
+    padding: 0 1.5rem;
+  }
+  @media (min-width: 1024px) {
+    padding: 0 2rem;
+  }
+}
+
+// Header
+.curso-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 0.5rem;
+    letter-spacing: -0.02em;
+
+    @media (min-width: 640px) {
+      font-size: 1.875rem;
+    }
+    @media (min-width: 1024px) {
+      font-size: 2rem;
+    }
+  }
+
+  p {
+    font-size: 0.9375rem;
+    color: #475569;
+    max-width: 32rem;
+    margin: 0 auto;
+    line-height: 1.6;
+
+    strong {
+      color: #334155;
+    }
+  }
+}
+
+// Grid: formulario y calendario alineados verticalmente (items-start)
+.curso-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  align-items: start;
+
+  @media (min-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+// Formulario
+.curso-form-section {
+  min-width: 0;
+}
+
+.curso-form {
+  background: #fff;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+
+  @media (min-width: 640px) {
+    padding: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #0f172a;
+    margin: 0 0 1.25rem;
+  }
+}
+
+.curso-message {
+  padding: 0.75rem 1rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+
+  &--error {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #b91c1c;
+  }
+
+  &--success {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    color: #15803d;
+  }
+}
+
+.curso-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.curso-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+
+  label {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: #475569;
+  }
+}
+
+.curso-error {
+  font-size: 0.75rem;
+  color: #dc2626;
+}
+
+.curso-input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  border-radius: 0.375rem;
+  border: 1px solid #e2e8f0;
+  background: #fff;
+  color: #0f172a;
+  transition: border-color 0.15s, box-shadow 0.15s;
+
+  &::placeholder {
+    color: #94a3b8;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.15);
+  }
+}
+
+.curso-btn {
+  width: 100%;
+  margin-top: 1.25rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #fff;
+  background: #2563eb;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background 0.15s;
+
+  &:hover:not(:disabled) {
+    background: #1d4ed8;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+// Calendario: alineado verticalmente con el formulario
+.curso-calendar-section {
+  min-width: 0;
+}
+
+.curso-calendar-wrapper {
+  @media (min-width: 1024px) {
+    position: sticky;
+    top: 5.5rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #0f172a;
+    margin: 0 0 0.25rem;
+  }
+
+  > p {
+    font-size: 0.8125rem;
+    color: #64748b;
+    margin: 0 0 1rem;
+  }
+}
+
+.curso-calendar-box {
+  background: #fff;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  min-height: 420px;
+
+  @media (min-width: 1024px) {
+    min-height: 580px;
+  }
+}
+
+// Footer
+.curso-footer {
+  text-align: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+
+  p {
+    font-size: 0.8125rem;
+    color: #64748b;
+    margin: 0 0 0.75rem;
+  }
+}
+
+.curso-whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  background: #25d366;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}

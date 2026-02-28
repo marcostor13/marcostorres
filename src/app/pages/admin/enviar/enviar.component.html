@@ -1,0 +1,51 @@
+<div class="admin-page">
+  <h1>Enviar mensajes</h1>
+  <p class="admin-desc">Envía mensajes con templates aprobados desde WhatsApp Cloud API.</p>
+
+  @if (accounts().length === 0) {
+    <p class="admin-empty-msg">Registra una cuenta en <a routerLink="/admin/cuentas-whatsapp">Cuentas WhatsApp</a>.</p>
+  } @else {
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="admin-form">
+      @if (error()) {
+        <div class="admin-error">{{ error() }}</div>
+      }
+      @if (success()) {
+        <div class="admin-success">{{ success() }}</div>
+      }
+      <div class="admin-field">
+        <label>Cuenta</label>
+        <select formControlName="accountId">
+          <option value="">Selecciona una cuenta</option>
+          @for (a of accounts(); track a.id) {
+            <option [value]="a.id">{{ a.name }}</option>
+          }
+        </select>
+      </div>
+      <div class="admin-field">
+        <label>Número destino (con código país)</label>
+        <input formControlName="to" placeholder="Ej: 51987654321" />
+      </div>
+      <div class="admin-field">
+        <label>Template</label>
+        <select formControlName="templateName">
+          <option value="">Selecciona un template</option>
+          @for (t of templates(); track t.name) {
+            <option [value]="t.name">{{ t.name }} ({{ getLang(t) }})</option>
+          }
+        </select>
+      </div>
+      <div class="admin-field">
+        <label>Idioma del template</label>
+        <select formControlName="languageCode">
+          @for (lang of languages(); track lang.code) {
+            <option [value]="lang.code">{{ lang.label }}</option>
+          }
+        </select>
+        <span class="admin-field-hint">Se ajusta automáticamente al seleccionar un template.</span>
+      </div>
+      <button type="submit" [disabled]="loading()" class="admin-btn-primary">
+        {{ loading() ? 'Enviando...' : 'Enviar' }}
+      </button>
+    </form>
+  }
+</div>

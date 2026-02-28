@@ -1,0 +1,101 @@
+<div class="curso-page min-h-screen overflow-x-hidden">
+  
+  <!-- Header -->
+  <nav class="curso-nav">
+    <a href="/" class="flex items-center gap-2">
+      <img src="/images/logo.png" alt="Marcos Torres" class="h-8 md:h-10 object-contain opacity-90">
+    </a>
+    <a href="https://wa.me/51975760418" target="_blank" class="curso-whatsapp">
+      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/></svg>
+      WhatsApp
+    </a>
+  </nav>
+
+  <main class="curso-main">
+    <div class="curso-container">
+      
+      <header class="curso-header">
+        <h1>Agenda tu clase</h1>
+        <p>Si ya realizaste el pago, completa el formulario y agenda tu fecha y hora para la clase del curso <strong>Productividad x10 con IA</strong>.</p>
+      </header>
+
+      <!-- Formulario + Calendly: alineados verticalmente -->
+      <div class="curso-grid">
+        
+        <section class="curso-form-section">
+          <form [formGroup]="form" (ngSubmit)="onSubmit()" class="curso-form">
+            <h2>Datos para tu clase</h2>
+
+            @if (errorMessage) {
+              <div class="curso-message curso-message--error">{{ errorMessage }}</div>
+            }
+            @if (successMessage) {
+              <div class="curso-message curso-message--success">{{ successMessage }}</div>
+            }
+
+            <div class="curso-fields">
+              <div class="curso-field">
+                <label for="name">Nombre completo</label>
+                <input id="name" type="text" formControlName="name" placeholder="Tu nombre completo" class="curso-input" />
+                @if (form.get('name')?.invalid && form.get('name')?.touched) {
+                  <span class="curso-error">Ingresa tu nombre completo</span>
+                }
+              </div>
+              <div class="curso-field">
+                <label for="phone">Teléfono</label>
+                <input id="phone" type="tel" formControlName="phone" placeholder="Ej: 999 888 777" class="curso-input" />
+                @if (form.get('phone')?.invalid && form.get('phone')?.touched) {
+                  <span class="curso-error">Ingresa un teléfono válido</span>
+                }
+              </div>
+              <div class="curso-field">
+                <label for="email">Correo electrónico</label>
+                <input id="email" type="email" formControlName="email" placeholder="tu@correo.com" class="curso-input" />
+                @if (form.get('email')?.invalid && form.get('email')?.touched) {
+                  <span class="curso-error">Ingresa un correo válido</span>
+                }
+              </div>
+              <div class="curso-field">
+                <label for="skill1">Habilidad que esperas obtener (1)</label>
+                <input id="skill1" type="text" formControlName="skill1" placeholder="Ej: Crear contenido visual con IA" class="curso-input" />
+              </div>
+              <div class="curso-field">
+                <label for="skill2">Habilidad que esperas obtener (2)</label>
+                <input id="skill2" type="text" formControlName="skill2" placeholder="Ej: Automatizar tareas repetitivas" class="curso-input" />
+              </div>
+            </div>
+
+            <button type="submit" [disabled]="loading || form.invalid" class="curso-btn">
+              @if (loading) { Enviando... } @else { Enviar datos }
+            </button>
+          </form>
+        </section>
+
+        <section class="curso-calendar-section">
+          <div class="curso-calendar-wrapper">
+            <h2>Selecciona tu fecha y hora</h2>
+            <p>Elige el horario que mejor te convenga para tu clase.</p>
+            <div class="curso-calendar-box">
+              <div 
+                class="calendly-inline-widget" 
+                data-url="https://calendly.com/marcostor13/new-meeting?hide_event_type_details=1&hide_gdpr_banner=1" 
+                style="min-width:320px;height:580px;">
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <footer class="curso-footer">
+        <p>¿Tienes dudas? Escríbenos directamente</p>
+        <a href="https://wa.me/51975760418" target="_blank" class="curso-whatsapp-btn">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/></svg>
+          WhatsApp: 975 760 418
+        </a>
+      </footer>
+
+    </div>
+  </main>
+
+  <app-footer></app-footer>
+</div>

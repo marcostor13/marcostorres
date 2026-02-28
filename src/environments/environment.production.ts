@@ -1,3 +1,4 @@
 export const environment = {
-    apiUrl: 'https://landings-back.marcostorresalarcon.com'
+    apiUrl: 'https://landings-back.marcostorresalarcon.com',
+    apiBaseUrl: ''
 };

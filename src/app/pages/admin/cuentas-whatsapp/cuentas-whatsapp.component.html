@@ -1,0 +1,84 @@
+<div class="admin-page">
+  <div class="admin-header">
+    <h1>Cuentas WhatsApp Cloud API</h1>
+    <p class="admin-desc">Registra las credenciales de cada cuenta para recibir y enviar mensajes. Documentación: <a href="https://developers.facebook.com/docs/whatsapp/cloud-api" target="_blank" rel="noopener">Meta for Developers</a></p>
+    <button type="button" class="admin-btn-primary" (click)="openForm()">+ Nueva cuenta</button>
+  </div>
+
+  @if (loading()) {
+    <p>Cargando...</p>
+  } @else if (accounts().length === 0) {
+    <div class="admin-empty">
+      <p>No hay cuentas registradas. Añade una para comenzar.</p>
+    </div>
+  } @else {
+    <div class="admin-grid">
+      @for (a of accounts(); track a.id) {
+        <div class="admin-card">
+          <h3>{{ a.name }}</h3>
+          <p><strong>Phone Number ID:</strong> {{ a.phoneNumberId }}</p>
+          @if (a.wabaId) {
+            <p><strong>WABA ID:</strong> {{ a.wabaId }}</p>
+          }
+          @if (a.phoneNumber) {
+            <p><strong>Teléfono:</strong> {{ a.phoneNumber }}</p>
+          }
+          <p class="admin-meta">
+            Access Token: {{ a.hasAccessToken ? '✓' : '✗' }} |
+            App Secret: {{ a.hasAppSecret ? '✓' : '✗' }} |
+            Verify Token: {{ a.verifyToken ? '✓' : '✗' }}
+          </p>
+          <div class="admin-card-actions">
+            <button type="button" class="admin-btn-secondary" (click)="editAccount(a)">Editar</button>
+            <button type="button" class="admin-btn-danger" (click)="deleteAccount(a.id, a.name)">Eliminar</button>
+          </div>
+        </div>
+      }
+    </div>
+  }
+
+  @if (formOpen()) {
+    <div class="admin-modal">
+      <div class="admin-modal-content">
+        <h2>{{ editingId() ? 'Editar' : 'Nueva' }} cuenta WhatsApp</h2>
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+          @if (error()) {
+            <div class="admin-error">{{ error() }}</div>
+          }
+          <div class="admin-field">
+            <label>Nombre (identificador)</label>
+            <input formControlName="name" placeholder="Ej: Soporte principal" />
+          </div>
+          <div class="admin-field">
+            <label>Access Token {{ editingId() ? '(dejar vacío para no cambiar)' : '*' }}</label>
+            <input formControlName="accessToken" type="password" placeholder="Token de Meta App Dashboard" />
+          </div>
+          <div class="admin-field">
+            <label>Phone Number ID *</label>
+            <input formControlName="phoneNumberId" placeholder="ID del número en Cloud API" />
+          </div>
+          <div class="admin-field">
+            <label>WABA ID (WhatsApp Business Account)</label>
+            <input formControlName="wabaId" placeholder="Para templates y listado" />
+          </div>
+          <div class="admin-field">
+            <label>Número de teléfono</label>
+            <input formControlName="phoneNumber" placeholder="Ej: 51987654321" />
+          </div>
+          <div class="admin-field">
+            <label>App Secret {{ editingId() ? '(dejar vacío para no cambiar)' : '' }}</label>
+            <input formControlName="appSecret" type="password" placeholder="Opcional" />
+          </div>
+          <div class="admin-field">
+            <label>Verify Token (webhook GET)</label>
+            <input formControlName="verifyToken" placeholder="Token para verificación" />
+          </div>
+          <div class="admin-actions">
+            <button type="button" (click)="closeForm()">Cancelar</button>
+            <button type="submit" [disabled]="submitting()">{{ submitting() ? 'Guardando...' : 'Guardar' }}</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  }
+</div>

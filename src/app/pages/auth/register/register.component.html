@@ -1,0 +1,31 @@
+<div class="auth-page">
+  <div class="auth-card">
+    <h1>Crear cuenta</h1>
+    <p class="auth-subtitle">Regístrate para acceder al panel</p>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="auth-form">
+      @if (error) {
+        <div class="auth-error">{{ error }}</div>
+      }
+      <div class="auth-field">
+        <label for="name">Nombre (opcional)</label>
+        <input id="name" type="text" formControlName="name" placeholder="Tu nombre" />
+      </div>
+      <div class="auth-field">
+        <label for="email">Email</label>
+        <input id="email" type="email" formControlName="email" placeholder="tu@email.com" />
+      </div>
+      <div class="auth-field">
+        <label for="password">Contraseña (mín. 6 caracteres)</label>
+        <input id="password" type="password" formControlName="password" placeholder="••••••••" />
+      </div>
+      <button type="submit" [disabled]="loading" class="auth-btn">
+        {{ loading ? 'Registrando...' : 'Registrarse' }}
+      </button>
+    </form>
+
+    <p class="auth-footer">
+      ¿Ya tienes cuenta? <a routerLink="/login">Inicia sesión</a>
+    </p>
+  </div>
+</div>

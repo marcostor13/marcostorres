@@ -1,0 +1,50 @@
+<div class="admin-page">
+  <h1>Mensajes entrantes</h1>
+  <p class="admin-desc">Mensajes recibidos por WhatsApp Cloud API. Configura el webhook en Meta para recibir mensajes.</p>
+
+  @if (accounts().length > 0) {
+    <div class="admin-filters">
+      <button
+        type="button"
+        class="admin-filter-btn"
+        [class.active]="selectedAccountId() === null"
+        (click)="filterByAccount(null)"
+      >
+        Todas
+      </button>
+      @for (a of accounts(); track a.id) {
+        <button
+          type="button"
+          class="admin-filter-btn"
+          [class.active]="selectedAccountId() === a.id"
+          (click)="filterByAccount(a.id)"
+        >
+          {{ a.name }}
+        </button>
+      }
+    </div>
+  }
+
+  @if (loading()) {
+    <p>Cargando mensajes...</p>
+  } @else if (messages().length === 0) {
+    <div class="admin-empty">
+      <p>No hay mensajes. Los mensajes aparecerán cuando configures el webhook en Meta y recibas mensajes.</p>
+      <p class="admin-hint">URL del webhook: <code>{{ getWebhookUrl() }}</code></p>
+    </div>
+  } @else {
+    <p class="admin-total">Total: {{ total() }} mensajes</p>
+    <div class="admin-messages">
+      @for (m of messages(); track m.id) {
+        <div class="admin-msg">
+          <div class="admin-msg-header">
+            <span class="admin-msg-from">{{ m.fromName || m.from }}</span>
+            <span class="admin-msg-account">{{ m.accountName }}</span>
+            <span class="admin-msg-time">{{ m.receivedAt | date:'short' }}</span>
+          </div>
+          <div class="admin-msg-body">{{ m.text || '(sin texto)' }}</div>
+        </div>
+      }
+    </div>
+  }
+</div>

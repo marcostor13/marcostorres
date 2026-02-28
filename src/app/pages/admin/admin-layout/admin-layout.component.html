@@ -1,0 +1,20 @@
+<div class="admin-layout">
+  <aside class="admin-sidebar">
+    <div class="admin-brand">
+      <a routerLink="/admin">Admin</a>
+    </div>
+    <nav class="admin-nav">
+      <a routerLink="/admin/cuentas-whatsapp" routerLinkActive="active">Cuentas WhatsApp</a>
+      <a routerLink="/admin/templates" routerLinkActive="active">Templates</a>
+      <a routerLink="/admin/enviar" routerLinkActive="active">Enviar mensajes</a>
+      <a routerLink="/admin/mensajes" routerLinkActive="active">Mensajes entrantes</a>
+    </nav>
+    <div class="admin-user">
+      <span>{{ auth.user()?.email }}</span>
+      <button type="button" (click)="logout()">Salir</button>
+    </div>
+  </aside>
+  <main class="admin-main">
+    <router-outlet></router-outlet>
+  </main>
+</div>

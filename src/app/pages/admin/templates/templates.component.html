@@ -1,0 +1,54 @@
+<div class="admin-page">
+  <h1>Templates WhatsApp</h1>
+  <p class="admin-desc">Lista los templates aprobados de cada cuenta. Los templates se crean desde Meta Business Manager.</p>
+
+  @if (accounts().length === 0) {
+    <p class="admin-empty-msg">No hay cuentas. Registra una en <a routerLink="/admin/cuentas-whatsapp">Cuentas WhatsApp</a>.</p>
+  } @else {
+    <div class="admin-tabs">
+      @for (a of accounts(); track a.id) {
+        <button
+          type="button"
+          class="admin-tab"
+          [class.active]="selectedAccountId() === a.id"
+          (click)="selectAccount(a.id)"
+        >
+          {{ a.name }}
+        </button>
+      }
+    </div>
+
+    @if (selectedAccountId()) {
+      @if (loading()) {
+        <p>Cargando templates...</p>
+      } @else if (error()) {
+        <div class="admin-error">{{ error() }}</div>
+      } @else if (templates().length === 0) {
+        <p class="admin-empty-msg">No hay templates en esta cuenta. Crea templates desde Meta Business Manager.</p>
+      } @else {
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Idioma</th>
+                <th>Estado</th>
+                <th>Categoría</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (t of templates(); track t.name) {
+                <tr>
+                  <td>{{ t.name }}</td>
+                  <td>{{ getLang(t) }}</td>
+                  <td><span class="status" [class]="t.status">{{ t.status }}</span></td>
+                  <td>{{ t.category || '-' }}</td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+      }
+    }
+  }
+</div>

@@ -28,6 +28,11 @@ yarn-error.log
 !.vscode/extensions.json
 .history/*
 
+# Environment variables (credenciales)
+.env
+.env.local
+.env.*.local
+
 # Miscellaneous
 /.angular/cache
 .sass-cache/
@@ -43,3 +48,6 @@ Thumbs.db
 
 # Large media (host externally or use Git LFS)
 public/images/background.gif
+
+# Local Netlify folder
+.netlify

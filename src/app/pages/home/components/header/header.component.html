@@ -25,7 +25,9 @@
   </div>
 
   <!-- CTA Desktop -->
-  <div class="hidden lg:block">
+  <div class="hidden lg:flex items-center gap-3">
+    <a routerLink="/login" class="text-gray-300 hover:text-white transition-all duration-300 font-medium text-sm">Inicio sesión</a>
+    <a routerLink="/register" class="px-4 py-2 bg-white/10 border border-white/30 text-white rounded-full hover:bg-white/20 transition-all duration-300 font-medium text-sm">Registro</a>
     <button (click)="scrollTo('contact')" class="px-6 py-2 border border-primary-neonCyan text-primary-neonCyan rounded-full hover:bg-primary-neonCyan hover:text-black transition-all duration-300 font-bold text-sm tracking-wider shadow-[0_0_15px_rgba(0,243,255,0.2)] hover:shadow-[0_0_25px_rgba(0,243,255,0.5)]">
       HABLEMOS
     </button>
@@ -56,6 +58,8 @@
     
     <div class="w-16 h-1 bg-white/10 rounded-full my-4"></div>
 
+    <a routerLink="/login" (click)="toggleMenu()" class="text-xl text-white font-medium hover:text-primary-neonCyan transition-colors">Inicio sesión</a>
+    <a routerLink="/register" (click)="toggleMenu()" class="px-8 py-3 border border-white/50 text-white rounded-full font-medium text-lg hover:bg-white/10 transition-colors">Registro</a>
     <button (click)="scrollTo('contact')" class="px-10 py-4 bg-primary-neonCyan text-black font-bold rounded-full text-xl shadow-[0_0_20px_rgba(0,243,255,0.4)] hover:scale-105 transition-transform">
       HABLEMOS
     </button>
