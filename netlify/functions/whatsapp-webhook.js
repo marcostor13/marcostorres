@@ -12,9 +12,15 @@ exports.handler = async (event, context) => {
     try {
       const params = event.queryStringParameters || {};
       const mode = params['hub.mode'];
-      const token = params['hub.verify_token'];
+      const token = (params['hub.verify_token'] || '').trim();
       const challenge = params['hub.challenge'];
       if (mode === 'subscribe' && challenge) {
+        // 1. Fallback: token global desde variable de entorno (más fácil de configurar)
+        const envToken = (process.env.WHATSAPP_VERIFY_TOKEN || '').trim();
+        if (envToken && token === envToken) {
+          return { statusCode: 200, headers: { 'Content-Type': 'text/plain' }, body: challenge };
+        }
+        // 2. Buscar cuenta por verifyToken en MongoDB
         const db = await getDb();
         const account = await db.collection('whatsapp_accounts').findOne({ verifyToken: token });
         if (account) {

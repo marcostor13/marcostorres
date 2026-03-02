@@ -36,6 +36,7 @@ El proyecto está listo para desplegarse en Netlify con un solo `git push`.
 **Variables de entorno en Netlify** (*Site settings* → *Environment variables*):
 - `MONGODB_URI`: URI de MongoDB Atlas
 - `JWT_SECRET`: Cadena secreta para firmar tokens (usa una segura en producción)
+- `WHATSAPP_VERIFY_TOKEN` (opcional): Token para validar el webhook. Si lo configuras, usa el mismo valor en Meta al registrar la URL.
 
 **Desarrollo local**: 
 - **`npm start`** o **`bun start`**: Solo Angular. Abre **`http://localhost:4200`**. Para API en local, usa `apiBaseUrl` apuntando a tu sitio en Netlify.
@@ -49,7 +50,12 @@ El proyecto está listo para desplegarse en Netlify con un solo `git push`.
 
 **Panel admin**: `/admin` (requiere login). Rutas: `/login`, `/register`.
 
-**Webhook WhatsApp**: Configura en Meta `https://tu-dominio.netlify.app/api/whatsapp-webhook` con el `verify_token` de cada cuenta.
+**Webhook WhatsApp**:
+1. **URL**: `https://tu-dominio.netlify.app/api/whatsapp-webhook` (usa tu dominio real de Netlify, no localhost).
+2. **Verify Token**: Debe coincidir con una de estas opciones:
+   - **Opción A (recomendada)**: Define `WHATSAPP_VERIFY_TOKEN` en Netlify (ej: `mi_token_secreto_123`) y usa ese mismo valor en Meta.
+   - **Opción B**: Usa el token guardado en la cuenta de WhatsApp (admin → cuentas → Verify Token).
+3. Si falla la validación: revisa que la URL sea pública, que el token coincida exactamente, y que `MONGODB_URI` esté configurada (si usas opción B).
 
 ### Comandos útiles
 
